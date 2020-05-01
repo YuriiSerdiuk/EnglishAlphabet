@@ -2,6 +2,10 @@
 ## Eclipse
 #################
 *node_modules/*
+.vscode
+.DS_Store
+
+
 *.pydevproject
 .project
 .metadata
