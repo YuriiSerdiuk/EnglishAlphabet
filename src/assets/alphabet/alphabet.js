@@ -1,0 +1,165 @@
+export const alphabet = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+
+export const styleAlphabet = [
+  {
+    letter: "A",
+    color: "#F06543",
+    borderColor: "#A82525",
+    backgroundImage:
+      'url("https://cdn2.iconfinder.com/data/icons/agriculture-set1/200/24-512.png")',
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  },
+  {
+    letter: "B",
+    color: "#F99B28",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "C",
+    color: "#FEF723",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "D",
+    color: "#B5D444",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "E",
+    color: "#0AADE8",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "F",
+    color: "#EA259D",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "G",
+    color: "#363190",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "H",
+    color: "#F9403C",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "I",
+    color: "#F5901E",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "J",
+    color: "#FFF11A",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "K",
+    color: "#B7D340",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "L",
+    color: "#0AADE9",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "M",
+    color: "#EA008D",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "N",
+    color: "#2E2B92",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "O",
+    color: "#F6A01A",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "P",
+    color: "#F59120",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "Q",
+    color: "#F8EA13",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "R",
+    color: "#B3D43A",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "S",
+    color: "#04ACE4",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "T",
+    color: "#D9077D",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "U",
+    color: "#2E2E8C",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "V",
+    color: "#ED3131",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "W",
+    color: "#F7901B",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "X",
+    color: "#F9F506",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "Y",
+    color: "#B7D64A",
+    borderColor: "#A82525",
+  },
+  {
+    letter: "Z",
+    color: "#02AFE8",
+    borderColor: "#A82525",
+  },
+];
