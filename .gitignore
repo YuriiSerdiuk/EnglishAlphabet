@@ -1,7 +1,7 @@
 #################
 ## Eclipse
 #################
-
+*node_modules/*
 *.pydevproject
 .project
 .metadata
