@@ -2,10 +2,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import { Howl, Howler } from "howler";
 
-import { styleAlphabet } from "../../assets/alphabet/alphabet";
+import { styleAlphabet, audioAlphabet } from "../../assets/alphabet/alphabet";
 
-console.log(styleAlphabet);
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -17,6 +17,16 @@ const useStyles = makeStyles((theme) => ({
     // color: theme.palette.text.secondary,
   },
 }));
+
+const makeSound = (id) => {
+  console.log(audioAlphabet);
+  const sound = new Howl({
+    src: audioAlphabet[id],
+  });
+  sound.play();
+  Howler.volume(0.5);
+};
+
 export default function NestedGrid() {
   const classes = useStyles();
 
@@ -25,11 +35,12 @@ export default function NestedGrid() {
       <React.Fragment>
         {styleLaters.map(({ letter, color, borderColor, backgroundImage }) => {
           return (
-            <Grid item xs={2}>
+            <Grid key={letter} item xs={2}>
               <Paper
                 id={letter}
+                key={letter}
                 onClick={() => {
-                  alert(letter);
+                  makeSound(letter);
                 }}
                 className={classes.paper}
                 elevation={3}
