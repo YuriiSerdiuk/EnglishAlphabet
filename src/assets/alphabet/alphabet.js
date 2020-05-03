@@ -89,7 +89,7 @@ export const styleAlphabet = [
     color: "#F06543",
     borderColor: "#A82525",
     backgroundImage:
-      'url("https://cdn2.iconfinder.com/data/icons/agriculture-set1/200/24-512.png")',
+      'url("https://katelynsdesigns.com/images/products/applesvg.jpg")',
   },
   {
     letter: "B",

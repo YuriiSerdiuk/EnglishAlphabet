@@ -11,9 +11,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(5),
+    padding: theme.spacing(1),
     textAlign: "center",
-    fontSize: "80px",
+    fontSize: "100px",
     // color: theme.palette.text.secondary,
   },
 }));
@@ -30,12 +30,12 @@ const makeSound = (id) => {
 export default function NestedGrid() {
   const classes = useStyles();
 
-  function FormRow({ laters, styleLaters }) {
+  function FormRow({ styleLaters }) {
     return (
       <React.Fragment>
         {styleLaters.map(({ letter, color, borderColor, backgroundImage }) => {
           return (
-            <Grid key={letter} item xs={2}>
+            <Grid key={letter} item xs={2} style={{ minWidth: "150px" }}>
               <Paper
                 id={letter}
                 key={letter}
@@ -50,6 +50,7 @@ export default function NestedGrid() {
                   backgroundImage: backgroundImage ? backgroundImage : "",
                   backgroundPosition: "40px 40px",
                   backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
                 }}
               >
                 {letter}
@@ -64,32 +65,8 @@ export default function NestedGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow
-            laters={["A", "B", "C", "D", "E", "F"]}
-            styleLaters={styleAlphabet.slice(0, 6)}
-          />
-        </Grid>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow
-            laters={["G", "H", "I", "J", "K", "L"]}
-            styleLaters={styleAlphabet.slice(6, 12)}
-          />
-        </Grid>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow
-            laters={["M", "N", "O", "P", "Q", "R"]}
-            styleLaters={styleAlphabet.slice(12, 18)}
-          />
-        </Grid>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow
-            laters={["S", "T", "U", "V", "W", "X"]}
-            styleLaters={styleAlphabet.slice(18, 24)}
-          />
-        </Grid>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow laters={["Y", "Z"]} styleLaters={styleAlphabet.slice(24)} />
+        <Grid container item xs spacing={3}>
+          <FormRow styleLaters={styleAlphabet} />
         </Grid>
       </Grid>
     </div>
