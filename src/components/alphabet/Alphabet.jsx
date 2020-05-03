@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { Howl, Howler } from "howler";
 
 import { styleAlphabet, audioAlphabet } from "../../assets/alphabet/alphabet";
+import { makeSound } from "../../utils/helper";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,20 +13,13 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(1),
-    textAlign: "center",
+    textAlign: "start",
+    // height: "100px",
     fontSize: "100px",
+    textShadow: "1px 1px 2px red, 0 0 1em blue, 0 0 0.1em black",
     // color: theme.palette.text.secondary,
   },
 }));
-
-const makeSound = (id) => {
-  console.log(audioAlphabet);
-  const sound = new Howl({
-    src: audioAlphabet[id],
-  });
-  sound.play();
-  Howler.volume(0.5);
-};
 
 export default function NestedGrid() {
   const classes = useStyles();
@@ -40,16 +34,15 @@ export default function NestedGrid() {
                 id={letter}
                 key={letter}
                 onClick={() => {
-                  makeSound(letter);
+                  makeSound(letter, Howl, Howler, audioAlphabet);
                 }}
                 className={classes.paper}
                 elevation={3}
                 style={{
                   color: `${color}`,
-                  textShadow: "1px 1px 2px red, 0 0 1em blue, 0 0 0.1em black",
                   backgroundImage: backgroundImage ? backgroundImage : "",
-                  backgroundPosition: "40px 40px",
-                  backgroundSize: "cover",
+                  backgroundPosition: "right",
+                  backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
                 }}
               >
