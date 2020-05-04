@@ -25,6 +25,33 @@ import x from "../../assets/audio/letter-x.mp3";
 import y from "../../assets/audio/letter-y.mp3";
 import z from "../../assets/audio/letter-z.mp3";
 
+import apple from "../../assets/audio/apple.mp3";
+import banana from "../../assets/audio/banana.mp3";
+import cat from "../../assets/audio/cat.mp3";
+import dog from "../../assets/audio/dog.mp3";
+import elephant from "../../assets/audio/elephant.mp3";
+import fox from "../../assets/audio/fox.mp3";
+import giraffe from "../../assets/audio/giraffe.mp3";
+import hat from "../../assets/audio/hat.mp3";
+import ice_cream from "../../assets/audio/ice cream.mp3";
+import juice from "../../assets/audio/juice.mp3";
+import key from "../../assets/audio/key.mp3";
+import lion from "../../assets/audio/lion.mp3";
+import mouse from "../../assets/audio/mouse.mp3";
+import nut from "../../assets/audio/nut.mp3";
+import orange from "../../assets/audio/orange.mp3";
+import panda from "../../assets/audio/panda.mp3";
+import queen from "../../assets/audio/queen.mp3";
+import rabbit from "../../assets/audio/rabbit.mp3";
+import sun from "../../assets/audio/sun.mp3";
+import tiger from "../../assets/audio/tiger.mp3";
+import unicorn from "../../assets/audio/unicorn.mp3";
+import vase from "../../assets/audio/vase.mp3";
+import wolf from "../../assets/audio/wolf.mp3";
+import xylophone from "../../assets/audio/xylophone.mp3";
+import yoyo from "../../assets/audio/yoyo.mp3";
+import zebra from "../../assets/audio/zebra.mp3";
+
 export const audioAlphabet = {
   A: a,
   B: b,
@@ -52,6 +79,32 @@ export const audioAlphabet = {
   X: x,
   Y: y,
   Z: z,
+  Apple: apple,
+  Banana: banana,
+  Cat: cat,
+  Dog: dog,
+  Elephant: elephant,
+  Fox: fox,
+  Giraffe: giraffe,
+  Hat: hat,
+  "Ice Cream": ice_cream,
+  Juice: juice,
+  Key: key,
+  Lion: lion,
+  Mouse: mouse,
+  Nut: nut,
+  Orange: orange,
+  Panda: panda,
+  Queen: queen,
+  Rabbit: rabbit,
+  Sun: sun,
+  Tiger: tiger,
+  Unicorn: unicorn,
+  Vase: vase,
+  Wolf: wolf,
+  Xylophone: xylophone,
+  Yoyo: yoyo,
+  Zebra: zebra,
 };
 
 export const alphabet = [

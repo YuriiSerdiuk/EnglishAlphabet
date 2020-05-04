@@ -1,1 +1,1 @@
-export { default } from "./Alphabet";
+export { default } from "./Alphabet.Container";
