@@ -3,5 +3,5 @@ export const makeSound = (id, Howl, Howler, audioAlphabet) => {
     src: audioAlphabet[id],
   });
   sound.play();
-  Howler.volume(0.5);
+  Howler.volume(1.0);
 };
