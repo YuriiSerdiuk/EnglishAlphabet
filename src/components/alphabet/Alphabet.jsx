@@ -14,16 +14,14 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: "start",
-    // height: "100px",
-    // fontSize: "100px",
-    textShadow: "1px 1px 2px red, 0 0 1em blue, 0 0 0.1em black",
-    // color: theme.palette.text.secondary,
+    textShadow: "5px 1px 3px black",
+    color: theme.palette.text.secondary,
   },
   card: {
     display: "flex",
     flexDirection: "row",
   },
-  letter: { flexGrow: 1, width: "100%", fontSize: "60px" },
+  letter: { flexGrow: 1, width: "100%", fontSize: "100px" },
 
   imgBlock: {
     width: "100%",
@@ -31,7 +29,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
-  img: { width: "50%" },
+  img: { width: "80%" },
+  imgText: {
+    fontSize: "20px",
+    color: "black",
+    textAlign: "center",
+    textShadow: "0 0 0 ",
+  },
 }));
 
 export default function NestedGrid() {
@@ -54,10 +58,6 @@ export default function NestedGrid() {
                   elevation={3}
                   style={{
                     color: `${color}`,
-                    //   backgroundImage: backgroundImage ? backgroundImage : "",
-                    //   backgroundPosition: "right",
-                    //   backgroundSize: "contain",
-                    //   backgroundRepeat: "no-repeat",
                   }}
                 >
                   <div className={classes.card}>
@@ -68,7 +68,7 @@ export default function NestedGrid() {
                         src={src ? src : ""}
                         alt={name ? name : "text"}
                       />
-                      <p>{name ? name : "text"}</p>
+                      <p className={classes.imgText}>{name ? name : "text"}</p>
                     </div>
                   </div>
                 </Paper>
