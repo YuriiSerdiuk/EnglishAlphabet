@@ -165,7 +165,7 @@ export default function PersistentDrawerLeft() {
           [classes.contentShift]: open,
         })}
       >
-        {/* <Alphabet /> */}
+        <Alphabet />
       </main>
     </div>
   );

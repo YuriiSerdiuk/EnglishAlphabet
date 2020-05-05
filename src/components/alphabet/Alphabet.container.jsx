@@ -1,8 +1,8 @@
-// import React from "react";
-// import Alphabet from "./Alphabet";
+import React from "react";
+import Alphabet from "./Alphabet";
 
-// const AlphabetConteiner = () => {
-//   return <Alphabet />;
-// };
+const AlphabetConteiner = () => {
+  return <Alphabet />;
+};
 
-// export default AlphabetConteiner;
+export default AlphabetConteiner;
