@@ -55,12 +55,12 @@ function FormRow({ styleLaters }) {
                 color: `${color}`,
               }}
             >
-              {/* <Card
+              <Card
                 letter={letter}
                 src={src}
                 name={name}
                 audioAlphabet={audioAlphabet}
-              /> */}
+              />
             </Paper>
           </Grid>
         );
