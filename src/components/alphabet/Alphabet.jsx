@@ -19,7 +19,7 @@ export default function NestedGrid() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid container item xs spacing={3} className={classes.greed}>
-          {/* <FormRow styleLaters={styleAlphabet} /> */}
+          <FormRow styleLaters={styleAlphabet} />
         </Grid>
       </Grid>
     </div>
