@@ -18,7 +18,11 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 
-import Alphabet from "../alphabet";
+import { Provider, connect } from "react-redux";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import EnglishAlphabet from "../alphabet";
 
 const drawerWidth = 240;
 
@@ -81,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PersistentDrawerLeft() {
+const PersistentDrawerLeft = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -165,8 +169,41 @@ export default function PersistentDrawerLeft() {
           [classes.contentShift]: open,
         })}
       >
-        <Alphabet />
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <EnglishAlphabet />
+            </Route>
+            <Route path="/ukrain">
+              <p>Ukrain alphabet</p>
+            </Route>
+            <Route path="/russion">
+              <p>Russion alphabet</p>
+            </Route>
+            <Route path="/german">
+              <p>German alphabet</p>
+            </Route>
+          </Switch>
+        </Router>
       </main>
     </div>
   );
-}
+};
+const mapStateToProps = (state) => {
+  // console.log("state", state);
+  return {
+    count: state,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleIncrementClick: () => dispatch({ type: "INCREMENT" }),
+    handleDecrementClick: () => dispatch({ type: "DECREMENT" }),
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PersistentDrawerLeft);
