@@ -1,8 +1,6 @@
 const initialState = {
-  alphabet: [],
-  language: [],
-  group: [],
-  error: "",
+  alphabets: [],
+  language: "",
 };
 
 export default initialState;
