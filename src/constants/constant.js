@@ -1,1 +1,1 @@
-export const alphabet = ["english", "russian"];
+// export const alphabet = ["english", "russian"];
