@@ -20,7 +20,7 @@ const RussianAlphabet = (props) => {
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid container item xs spacing={3} className={classes.greed}>
-                    <FormRow styleLaters={alphabet} />
+                    <FormRow styleLaters={alphabet} {...props} />
                 </Grid>
             </Grid>
         </div>

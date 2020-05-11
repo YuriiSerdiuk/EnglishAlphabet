@@ -6,8 +6,6 @@ import Grid from "@material-ui/core/Grid";
 import { Howl, Howler } from "howler";
 
 import Card from "../card";
-import { audioAlphabet } from "../../assets/alphabet/alphabet";
-
 import { makeSound, getMediaQuery } from "../../utils/helper";
 
 const useStyles = makeStyles((theme) => {
@@ -28,9 +26,10 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-function FormRow({ styleLaters }) {
+function FormRow(props) {
+  const { styleLaters, audioAlphabet } = props
   const classes = useStyles();
-
+  console.log('props', props);
   const media = {
     phone: useMediaQuery(" (min-width: 200px) and (max-width: 480px)"),
     laptop: useMediaQuery("(min-width: 481px) and (max-width: 979px)"),

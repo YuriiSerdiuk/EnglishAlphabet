@@ -12,14 +12,14 @@ const useStyles = makeStyles((theme) => ({
   greed: { margin: "auto" },
 }));
 
-export default function NestedGrid() {
+export default function NestedGrid(props) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid container item xs spacing={3} className={classes.greed}>
-          <FormRow styleLaters={styleAlphabet} />
+          <FormRow styleLaters={styleAlphabet} {...props} />
         </Grid>
       </Grid>
     </div>
