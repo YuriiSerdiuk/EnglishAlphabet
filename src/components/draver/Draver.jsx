@@ -34,55 +34,55 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
   },
   dividerTitle: {
-    textAlign:"center",
-    padding:"5px"
+    textAlign: "center",
+    padding: "5px"
   },
 }));
 
 
-const   Draver = ({open,setOpen}) => {
-    const classes = useStyles();
-    const theme = useTheme();
-  
-    const handleDrawerClose = () => {
-      setOpen(false);
-    };
+const Draver = ({ open, setOpen }) => {
+  const classes = useStyles();
+  const theme = useTheme();
 
-return (
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+
+  return (
     <Drawer
-    className={classes.drawer}
-    variant="persistent"
-    anchor="left"
-    open={open}
-    classes={{
-      paper: classes.drawerPaper,
-    }}
-  >
-    <div className={classes.drawerHeader}>
-      <IconButton onClick={handleDrawerClose}>
-        {theme.direction === "ltr" ? (
-          <ChevronLeftIcon />
-        ) : (
-          <ChevronRightIcon />
-        )}
-      </IconButton>
-    </div>
-    <Divider />
-    <Typography className={classes.dividerTitle}> Choose Languages</Typography>
-    <List>
-      {["english", "russion", "ukrain"].map((text, index) => (
-        <ListItem button key={text}>
-          <ListItemIcon>
-            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-          </ListItemIcon> 
-            
+      className={classes.drawer}
+      variant="persistent"
+      anchor="left"
+      open={open}
+      classes={{
+        paper: classes.drawerPaper,
+      }}
+    >
+      <div className={classes.drawerHeader}>
+        <IconButton onClick={handleDrawerClose}>
+          {theme.direction === "ltr" ? (
+            <ChevronLeftIcon />
+          ) : (
+              <ChevronRightIcon />
+            )}
+        </IconButton>
+      </div>
+      <Divider />
+      <Typography className={classes.dividerTitle}> Choose Languages</Typography>
+      <List>
+        {["english", "russian", "ukraine"].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>
+              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            </ListItemIcon>
+
             <Link to={`/${text}`}><ListItemText primary={text} /></Link>
-        </ListItem>
-      ))}
-    </List>
-    <Divider />
-  </Drawer>
-)
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+    </Drawer>
+  )
 }
 
 export default withRouter(Draver);

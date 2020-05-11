@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import EnglishAlphabet from "../alphabet";
 import Draver from '../draver'
 import RussianAlphabet from '../russianAlphabet'
+import UkraineAlphabet from '../ukraineAlphabet'
 
 const drawerWidth = 240;
 
@@ -126,10 +127,10 @@ const PersistentDrawerLeft = ({ initLanguage }) => {
             <Route exact path="/english">
               <EnglishAlphabet />
             </Route>
-            <Route path="/ukrain">
-              <p>Ukrain alphabet</p>
+            <Route path="/ukraine">
+              < UkraineAlphabet />
             </Route>
-            <Route path="/russion">
+            <Route path="/russian">
               <RussianAlphabet />
             </Route>
             <Route path="/german">
