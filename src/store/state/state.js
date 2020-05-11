@@ -1,5 +1,5 @@
 const initialState = {
-  alphabets: [],
+  alphabets: {},
   language: "",
 };
 

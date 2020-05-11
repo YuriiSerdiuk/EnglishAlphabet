@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -8,13 +8,11 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
-
-
-import { connect } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import EnglishAlphabet from "../alphabet";
 import Draver from '../draver'
+import RussianAlphabet from '../russianAlphabet'
 
 const drawerWidth = 240;
 
@@ -76,12 +74,13 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 0,
   },
   dividerTitle: {
-    textAlign:"center",
-    padding:"5px"
+    textAlign: "center",
+    padding: "5px"
   },
 }));
 
-const PersistentDrawerLeft = () => {
+
+const PersistentDrawerLeft = ({ initLanguage }) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -91,7 +90,6 @@ const PersistentDrawerLeft = () => {
 
   return (
     <div className={classes.root}>
-           
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -115,12 +113,12 @@ const PersistentDrawerLeft = () => {
         </Toolbar>
       </AppBar>
       <Router>
-      <Draver open={open}  setOpen={setOpen}/>
-      <main
-        className={clsx(classes.content, {
-          [classes.contentShift]: open,
-        })}
-      >
+        <Draver open={open} setOpen={setOpen} />
+        <main
+          className={clsx(classes.content, {
+            [classes.contentShift]: open,
+          })}
+        >
           <Switch>
             <Route exact path="/">
               <EnglishAlphabet />
@@ -132,32 +130,16 @@ const PersistentDrawerLeft = () => {
               <p>Ukrain alphabet</p>
             </Route>
             <Route path="/russion">
-              <p>Russion alphabet</p>
+              <RussianAlphabet />
             </Route>
             <Route path="/german">
               <p>German alphabet</p>
             </Route>
           </Switch>
-      </main>
-      </Router>
-    </div>
+        </main>
+      </Router >
+    </div >
   );
 };
-const mapStateToProps = (state) => {
-  // console.log("state", state);
-  return {
-    count: state,
-  };
-};
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    handleIncrementClick: () => dispatch({ type: "INCREMENT" }),
-    handleDecrementClick: () => dispatch({ type: "DECREMENT" }),
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PersistentDrawerLeft);
+export default PersistentDrawerLeft;

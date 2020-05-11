@@ -36,6 +36,12 @@ export const russianAlphabet = [
     name: "Арбуз",
   },
   {
+    letter: "Ё",
+    color: "#F06543",
+    src: "https://image.flaticon.com/icons/svg/826/826900.svg",
+    name: "Арбуз",
+  },
+  {
     letter: "Ж",
     color: "#F06543",
     src: "https://image.flaticon.com/icons/svg/826/826900.svg",
