@@ -1,24 +1,20 @@
-import React from 'react'
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-import RussianAlphabet from './RussianAlphabet'
-// import { audioAlphabet } from "../../assets/alphabet/alphabet";
+import RussianAlphabet from "./RussianAlphabet";
 import { audioRusianAlphabet } from "../../constants/russianAlphabet";
 
-
 const RussianAlphabetContainer = (props) => {
-    return (<RussianAlphabet {...props} audioAlphabet={audioRusianAlphabet} />)
-}
-
-const mapStateToProps = ({ alphabets }) => ({
-    alphabet: alphabets.russion
-});
-
-const mapDispatchToProps = {
-
+  return <RussianAlphabet {...props} audioAlphabet={audioRusianAlphabet} />;
 };
 
+const mapStateToProps = ({ alphabets }) => ({
+  alphabet: alphabets.russion,
+});
+
+const mapDispatchToProps = {};
+
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
+  mapStateToProps,
+  mapDispatchToProps
 )(RussianAlphabetContainer);

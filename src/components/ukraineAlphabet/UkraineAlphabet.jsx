@@ -1,7 +1,29 @@
-import React from 'react'
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
 
-const UkraineAlphabet = () => {
-    return (<p>UkraineAlphabet !!!</p>)
-}
+import FormRow from "../formRow";
 
-export default UkraineAlphabet
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  greed: { margin: "auto" },
+}));
+
+const UkraineAlphabet = (props) => {
+  const classes = useStyles();
+  const { alphabet = [] } = props;
+
+  return (
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid container item xs spacing={3} className={classes.greed}>
+          <FormRow styleLaters={alphabet} {...props} />
+        </Grid>
+      </Grid>
+    </div>
+  );
+};
+
+export default UkraineAlphabet;
