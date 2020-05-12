@@ -2,10 +2,10 @@ import React from "react";
 import UkraineAlphabet from "./UkraineAlphabet";
 
 import { connect } from "react-redux";
-import { audioRusianAlphabet } from "../../constants/russianAlphabet";
+import { audioUkraineAlphabet } from "../../constants/ukraineAlphabet";
 
 const UkraineAlphabetContainer = (props) => {
-  return <UkraineAlphabet {...props} audioAlphabet={audioRusianAlphabet} />;
+  return <UkraineAlphabet {...props} audioAlphabet={audioUkraineAlphabet} />;
 };
 
 const mapStateToProps = ({ alphabets }) => ({

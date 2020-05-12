@@ -1,72 +1,69 @@
+import а from "../assets/russionAudio/а.mp3";
+import б from "../assets/russionAudio/б.mp3";
+import в from "../assets/russionAudio/в.mp3";
+import г from "../assets/russionAudio/г.mp3";
+import д from "../assets/russionAudio/д.mp3";
+import е from "../assets/russionAudio/е.mp3";
+import ё from "../assets/russionAudio/ё.mp3";
+import ж from "../assets/russionAudio/ж.mp3";
+import з from "../assets/russionAudio/з.mp3";
+import и from "../assets/russionAudio/и.mp3";
+import й from "../assets/russionAudio/й.mp3";
+import к from "../assets/russionAudio/к.mp3";
+import л from "../assets/russionAudio/л.mp3";
+import м from "../assets/russionAudio/м.mp3";
+import н from "../assets/russionAudio/н.mp3";
+import о from "../assets/russionAudio/о.mp3";
+import п from "../assets/russionAudio/п.mp3";
+import р from "../assets/russionAudio/р.mp3";
+import с from "../assets/russionAudio/с.mp3";
+import т from "../assets/russionAudio/т.mp3";
+import у from "../assets/russionAudio/у.mp3";
+import ф from "../assets/russionAudio/ф.mp3";
+import х from "../assets/russionAudio/х.mp3";
+import ц from "../assets/russionAudio/ц.mp3";
+import ч from "../assets/russionAudio/ч.mp3";
+import ш from "../assets/russionAudio/ш.mp3";
+import щ from "../assets/russionAudio/щ.mp3";
+import ъ from "../assets/russionAudio/ъ.mp3";
+import ы from "../assets/russionAudio/ы.mp3";
+import ь from "../assets/russionAudio/ь.mp3";
+import э from "../assets/russionAudio/э.mp3";
+import ю from "../assets/russionAudio/ю.mp3";
+import я from "../assets/russionAudio/я.mp3";
 
-import а from '../assets/russionAudio/а.mp3'
-import б from '../assets/russionAudio/б.mp3'
-import в from '../assets/russionAudio/в.mp3'
-import г from '../assets/russionAudio/г.mp3'
-import д from '../assets/russionAudio/д.mp3'
-import е from '../assets/russionAudio/е.mp3'
-import ё from '../assets/russionAudio/ё.mp3'
-import ж from '../assets/russionAudio/ж.mp3'
-import з from '../assets/russionAudio/з.mp3'
-
-import и from '../assets/russionAudio/и.mp3'
-import й from '../assets/russionAudio/й.mp3'
-import к from '../assets/russionAudio/к.mp3'
-import л from '../assets/russionAudio/л.mp3'
-import м from '../assets/russionAudio/м.mp3'
-import н from '../assets/russionAudio/н.mp3'
-import о from '../assets/russionAudio/о.mp3'
-import п from '../assets/russionAudio/п.mp3'
-import р from '../assets/russionAudio/р.mp3'
-import с from '../assets/russionAudio/с.mp3'
-import т from '../assets/russionAudio/т.mp3'
-import у from '../assets/russionAudio/у.mp3'
-import ф from '../assets/russionAudio/ф.mp3'
-import х from '../assets/russionAudio/х.mp3'
-import ц from '../assets/russionAudio/ц.mp3'
-import ч from '../assets/russionAudio/ч.mp3'
-import ш from '../assets/russionAudio/ш.mp3'
-import щ from '../assets/russionAudio/щ.mp3'
-import ъ from '../assets/russionAudio/ъ.mp3'
-import ы from '../assets/russionAudio/ы.mp3'
-import ь from '../assets/russionAudio/ь.mp3'
-import э from '../assets/russionAudio/э.mp3'
-import ю from '../assets/russionAudio/ю.mp3'
-import я from '../assets/russionAudio/я.mp3'
-
-import арбуз from '../assets/russionAudio/арбуз.mp3'
-import банан from '../assets/russionAudio/банан.mp3'
-import волк from '../assets/russionAudio/волк.mp3'
-import гусь from '../assets/russionAudio/гусь.mp3'
-import дыня from '../assets/russionAudio/дыня.mp3'
-import енот from '../assets/russionAudio/енот.mp3'
-import ёлка from '../assets/russionAudio/ёлка.mp3'
-import жук from '../assets/russionAudio/жук.mp3'
-import зонт from '../assets/russionAudio/зонт.mp3'
-import игрушка from '../assets/russionAudio/игрушка.mp3'
-import йогурт from '../assets/russionAudio/йогурт.mp3'
-import корона from '../assets/russionAudio/корона.mp3'
-import лимон from '../assets/russionAudio/лимон.mp3'
-import машина from '../assets/russionAudio/машина.mp3'
-import нос from '../assets/russionAudio/нос.mp3'
-import очки from '../assets/russionAudio/очки.mp3'
-import пушка from '../assets/russionAudio/пушка.mp3'
-import ракета from '../assets/russionAudio/ракета.mp3'
-import солнце from '../assets/russionAudio/солнце.mp3'
-import тигр from '../assets/russionAudio/тигр.mp3'
-import улитка from '../assets/russionAudio/улитка.mp3'
-import фонарь from '../assets/russionAudio/фонарь.mp3'
-import хомяк from '../assets/russionAudio/хомяк.mp3'
-import цветок from '../assets/russionAudio/цветок.mp3'
-import черепаха from '../assets/russionAudio/черепаха.mp3'
-import шарик from '../assets/russionAudio/шарик.mp3'
-import щетка from '../assets/russionAudio/щетка.mp3'
-import сыр from '../assets/russionAudio/сыр.mp3'
-import экскаватор from '../assets/russionAudio/экскаватор.mp3'
+import арбуз from "../assets/russionAudio/арбуз.mp3";
+import банан from "../assets/russionAudio/банан.mp3";
+import волк from "../assets/russionAudio/волк.mp3";
+import гусь from "../assets/russionAudio/гусь.mp3";
+import дыня from "../assets/russionAudio/дыня.mp3";
+import енот from "../assets/russionAudio/енот.mp3";
+import ёлка from "../assets/russionAudio/ёлка.mp3";
+import жук from "../assets/russionAudio/жук.mp3";
+import зонт from "../assets/russionAudio/зонт.mp3";
+import игрушка from "../assets/russionAudio/игрушка.mp3";
+import йогурт from "../assets/russionAudio/йогурт.mp3";
+import корона from "../assets/russionAudio/корона.mp3";
+import лимон from "../assets/russionAudio/лимон.mp3";
+import машина from "../assets/russionAudio/машина.mp3";
+import нос from "../assets/russionAudio/нос.mp3";
+import очки from "../assets/russionAudio/очки.mp3";
+import пушка from "../assets/russionAudio/пушка.mp3";
+import ракета from "../assets/russionAudio/ракета.mp3";
+import солнце from "../assets/russionAudio/солнце.mp3";
+import тигр from "../assets/russionAudio/тигр.mp3";
+import улитка from "../assets/russionAudio/улитка.mp3";
+import фонарь from "../assets/russionAudio/фонарь.mp3";
+import хомяк from "../assets/russionAudio/хомяк.mp3";
+import цветок from "../assets/russionAudio/цветок.mp3";
+import черепаха from "../assets/russionAudio/черепаха.mp3";
+import шарик from "../assets/russionAudio/шарик.mp3";
+import щетка from "../assets/russionAudio/щетка.mp3";
+import сыр from "../assets/russionAudio/сыр.mp3";
+import экскаватор from "../assets/russionAudio/экскаватор.mp3";
 // import юла from '../assets/russionAudio/юла.mp3'
-import якорь from '../assets/russionAudio/якорь.mp3'
-import юпка from '../assets/russionAudio/юпка.mp3'
-
+import якорь from "../assets/russionAudio/якорь.mp3";
+import юпка from "../assets/russionAudio/юпка.mp3";
 
 export const russianAlphabet = [
   {
@@ -268,7 +265,6 @@ export const russianAlphabet = [
     name: "Якорь",
   },
 ];
-
 
 export const audioRusianAlphabet = {
   А: а,
