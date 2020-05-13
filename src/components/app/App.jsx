@@ -11,9 +11,11 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import EnglishAlphabet from "../alphabet";
-import Draver from '../draver'
-import RussianAlphabet from '../russianAlphabet'
-import UkraineAlphabet from '../ukraineAlphabet'
+import Draver from "../draver";
+import RussianAlphabet from "../russianAlphabet";
+import UkraineAlphabet from "../ukraineAlphabet";
+
+import { languageTitle } from "../../constants/constant";
 
 const drawerWidth = 240;
 
@@ -76,15 +78,14 @@ const useStyles = makeStyles((theme) => ({
   },
   dividerTitle: {
     textAlign: "center",
-    padding: "5px"
+    padding: "5px",
   },
 }));
 
-
-const PersistentDrawerLeft = ({ initLanguage }) => {
+const PersistentDrawerLeft = (props) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-
+  const { title = "" } = props;
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -109,7 +110,7 @@ const PersistentDrawerLeft = ({ initLanguage }) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            English Alphabet
+            {languageTitle[title]}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -128,7 +129,7 @@ const PersistentDrawerLeft = ({ initLanguage }) => {
               <EnglishAlphabet />
             </Route>
             <Route path="/ukraine">
-              < UkraineAlphabet />
+              <UkraineAlphabet />
             </Route>
             <Route path="/russian">
               <RussianAlphabet />
@@ -138,8 +139,8 @@ const PersistentDrawerLeft = ({ initLanguage }) => {
             </Route>
           </Switch>
         </main>
-      </Router >
-    </div >
+      </Router>
+    </div>
   );
 };
 

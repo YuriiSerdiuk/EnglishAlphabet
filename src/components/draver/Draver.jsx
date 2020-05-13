@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
@@ -12,9 +12,9 @@ import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
+import { Link, withRouter } from "react-router-dom";
 
-import { Link, withRouter } from 'react-router-dom';
-
+import { alphabet } from "../../constants/constant";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -35,12 +35,11 @@ const useStyles = makeStyles((theme) => ({
   },
   dividerTitle: {
     textAlign: "center",
-    padding: "5px"
+    padding: "5px",
   },
 }));
 
-
-const Draver = ({ open, setOpen }) => {
+const Draver = ({ open, setOpen, setLanguage }) => {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -63,26 +62,36 @@ const Draver = ({ open, setOpen }) => {
           {theme.direction === "ltr" ? (
             <ChevronLeftIcon />
           ) : (
-              <ChevronRightIcon />
-            )}
+            <ChevronRightIcon />
+          )}
         </IconButton>
       </div>
       <Divider />
-      <Typography className={classes.dividerTitle}> Choose Languages</Typography>
+      <Typography className={classes.dividerTitle}>
+        {" "}
+        Choose Languages
+      </Typography>
       <List>
-        {["english", "russian", "ukraine"].map((text, index) => (
+        {alphabet.map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon>
 
-            <Link to={`/${text}`}><ListItemText primary={text} /></Link>
+            <Link
+              to={`/${text}`}
+              onClick={() => {
+                setLanguage(text);
+              }}
+            >
+              <ListItemText primary={text} />
+            </Link>
           </ListItem>
         ))}
       </List>
       <Divider />
     </Drawer>
-  )
-}
+  );
+};
 
 export default withRouter(Draver);

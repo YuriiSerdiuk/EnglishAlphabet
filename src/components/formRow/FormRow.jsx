@@ -27,9 +27,8 @@ const useStyles = makeStyles((theme) => {
 });
 
 function FormRow(props) {
-  const { styleLaters, audioAlphabet } = props
+  const { styleLaters, audioAlphabet } = props;
   const classes = useStyles();
-  console.log('props', props);
   const media = {
     phone: useMediaQuery(" (min-width: 200px) and (max-width: 480px)"),
     laptop: useMediaQuery("(min-width: 481px) and (max-width: 979px)"),
