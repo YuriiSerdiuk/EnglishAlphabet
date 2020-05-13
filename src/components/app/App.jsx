@@ -14,6 +14,7 @@ import EnglishAlphabet from "../alphabet";
 import Draver from "../draver";
 import RussianAlphabet from "../russianAlphabet";
 import UkraineAlphabet from "../ukraineAlphabet";
+import Numbers from "../numbers";
 
 import { languageTitle } from "../../constants/constant";
 
@@ -136,6 +137,9 @@ const PersistentDrawerLeft = (props) => {
             </Route>
             <Route path="/german">
               <p>German alphabet</p>
+            </Route>
+            <Route path="/numbers">
+              <Numbers />
             </Route>
           </Switch>
         </main>

@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => {
 });
 
 function FormRow(props) {
-  const { styleLaters, audioAlphabet } = props;
+  const { styleLaters, audioAlphabet, hideLogo } = props;
   const classes = useStyles();
   const media = {
     phone: useMediaQuery(" (min-width: 200px) and (max-width: 480px)"),
@@ -45,7 +45,7 @@ function FormRow(props) {
             <Paper
               key={letter}
               onClick={() => {
-                makeSound(letter, Howl, Howler, audioAlphabet);
+                !hideLogo && makeSound(letter, Howl, Howler, audioAlphabet);
               }}
               className={classes[result && result[0]]}
               elevation={3}
@@ -58,6 +58,7 @@ function FormRow(props) {
                 src={src}
                 name={name}
                 audioAlphabet={audioAlphabet}
+                hideLogo={hideLogo}
               />
             </Paper>
           </Grid>

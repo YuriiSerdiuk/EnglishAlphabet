@@ -73,11 +73,29 @@ const Draver = ({ open, setOpen, setLanguage }) => {
       </Typography>
       <List>
         {alphabet.map((text, index) => (
-          <ListItem button key={text}>
+          <ListItem key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon>
-
+            <Link
+              to={`/${text}`}
+              onClick={() => {
+                setLanguage(text);
+              }}
+            >
+              <ListItemText primary={text} />
+            </Link>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <Typography className={classes.dividerTitle}> Number</Typography>
+      <List>
+        {["numbers"].map((text, index) => (
+          <ListItem key={text}>
+            <ListItemIcon>
+              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            </ListItemIcon>
             <Link
               to={`/${text}`}
               onClick={() => {

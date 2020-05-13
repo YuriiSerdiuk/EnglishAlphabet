@@ -30,9 +30,15 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontSize: "80px",
   },
+  number: {
+    textAlign: "center",
+    width: "100%",
+    fontSize: "80px",
+  },
 }));
 
-const Card = ({ letter, src, name, audioAlphabet }) => {
+const Card = ({ letter, src, name, audioAlphabet, hideLogo }) => {
+  console.log("otherProps", hideLogo);
   const classes = useStyles();
   const media = {
     phone: useMediaQuery(" (min-width: 200px) and (max-width: 480px)"),
@@ -44,10 +50,16 @@ const Card = ({ letter, src, name, audioAlphabet }) => {
   const phoneValidate = result && result[0] === "phone";
   return (
     <div className={classes.card}>
-      <div className={classes[phoneValidate ? "phone" : "letter"]}>
+      <div
+        className={
+          hideLogo
+            ? classes.number
+            : classes[phoneValidate ? "phone" : "letter"]
+        }
+      >
         {letter}
       </div>
-      {!phoneValidate && (
+      {!phoneValidate && !hideLogo && (
         <div className={classes.imgBlock}>
           <img
             className={classes.img}
