@@ -141,6 +141,12 @@ const PersistentDrawerLeft = (props) => {
             <Route path="/numbers">
               <Numbers />
             </Route>
+            <Route path="/setting">
+              <p>configure setting</p>
+            </Route>
+            <Route path="/contacts">
+              <p>Contacts</p>
+            </Route>
           </Switch>
         </main>
       </Router>

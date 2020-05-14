@@ -8,6 +8,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: aliceblue !important;
 }
+a {
+  color: red;
+  font-family: helvetica;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

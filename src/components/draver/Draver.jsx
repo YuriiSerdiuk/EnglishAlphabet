@@ -12,6 +12,11 @@ import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
+import DialpadIcon from "@material-ui/icons/Dialpad";
+import SortByAlphaIcon from "@material-ui/icons/SortByAlpha";
+import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
+import SettingsIcon from "@material-ui/icons/Settings";
+
 import { Link, withRouter } from "react-router-dom";
 
 import { alphabet } from "../../constants/constant";
@@ -75,7 +80,7 @@ const Draver = ({ open, setOpen, setLanguage }) => {
         {alphabet.map((text, index) => (
           <ListItem key={text}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              <SortByAlphaIcon />
             </ListItemIcon>
             <Link
               to={`/${text}`}
@@ -94,7 +99,7 @@ const Draver = ({ open, setOpen, setLanguage }) => {
         {["numbers"].map((text, index) => (
           <ListItem key={text}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {index % 2 === 0 ? <DialpadIcon /> : <DialpadIcon />}
             </ListItemIcon>
             <Link
               to={`/${text}`}
@@ -102,6 +107,36 @@ const Draver = ({ open, setOpen, setLanguage }) => {
                 setLanguage(text);
               }}
             >
+              <ListItemText primary={text} />
+            </Link>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <Divider />
+      <Typography className={classes.dividerTitle}> Setting</Typography>
+      <List>
+        {["setting"].map((text, index) => (
+          <ListItem key={text}>
+            <ListItemIcon>
+              <SettingsIcon />
+            </ListItemIcon>
+            <Link to={`/${text}`} onClick={() => {}}>
+              <ListItemText primary={text} />
+            </Link>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <Divider />
+      <Typography className={classes.dividerTitle}> Setting</Typography>
+      <List>
+        {["contacts"].map((text, index) => (
+          <ListItem key={text}>
+            <ListItemIcon>
+              <ContactPhoneIcon />
+            </ListItemIcon>
+            <Link to={`/${text}`} onClick={() => {}}>
               <ListItemText primary={text} />
             </Link>
           </ListItem>
