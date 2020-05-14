@@ -19,7 +19,13 @@ import SettingsIcon from "@material-ui/icons/Settings";
 
 import { Link, withRouter } from "react-router-dom";
 
-import { alphabet } from "../../constants/constant";
+import {
+  alphabet,
+  chooseLenguageAlphabet,
+  chooseDrawerNumber,
+  chooseDrawerSetting,
+  chooseDrawerContacts,
+} from "../../constants/constant";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -44,7 +50,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Draver = ({ open, setOpen, setLanguage }) => {
+const Draver = (props) => {
+  // console.log(props);
+  const { open, setOpen, language } = props;
   const classes = useStyles();
   const theme = useTheme();
 
@@ -73,8 +81,7 @@ const Draver = ({ open, setOpen, setLanguage }) => {
       </div>
       <Divider />
       <Typography className={classes.dividerTitle}>
-        {" "}
-        Choose Languages
+        {chooseLenguageAlphabet[language]}
       </Typography>
       <List>
         {alphabet.map((text, index) => (
@@ -85,7 +92,7 @@ const Draver = ({ open, setOpen, setLanguage }) => {
             <Link
               to={`/${text}`}
               onClick={() => {
-                setLanguage(text);
+                // setLanguage(text);
               }}
             >
               <ListItemText primary={text} />
@@ -94,7 +101,10 @@ const Draver = ({ open, setOpen, setLanguage }) => {
         ))}
       </List>
       <Divider />
-      <Typography className={classes.dividerTitle}> Number</Typography>
+      <Typography className={classes.dividerTitle}>
+        {" "}
+        {chooseDrawerNumber[language]}
+      </Typography>
       <List>
         {["numbers"].map((text, index) => (
           <ListItem key={text}>
@@ -104,7 +114,7 @@ const Draver = ({ open, setOpen, setLanguage }) => {
             <Link
               to={`/${text}`}
               onClick={() => {
-                setLanguage(text);
+                // setLanguage(text);
               }}
             >
               <ListItemText primary={text} />
@@ -114,7 +124,10 @@ const Draver = ({ open, setOpen, setLanguage }) => {
       </List>
       <Divider />
       <Divider />
-      <Typography className={classes.dividerTitle}> Setting</Typography>
+      <Typography className={classes.dividerTitle}>
+        {" "}
+        {chooseDrawerSetting[language]}
+      </Typography>
       <List>
         {["setting"].map((text, index) => (
           <ListItem key={text}>
@@ -129,7 +142,10 @@ const Draver = ({ open, setOpen, setLanguage }) => {
       </List>
       <Divider />
       <Divider />
-      <Typography className={classes.dividerTitle}> Setting</Typography>
+      <Typography className={classes.dividerTitle}>
+        {" "}
+        {chooseDrawerContacts[language]}
+      </Typography>
       <List>
         {["contacts"].map((text, index) => (
           <ListItem key={text}>

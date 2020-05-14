@@ -38,7 +38,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Card = ({ letter, src, name, audioAlphabet, hideLogo }) => {
-  console.log("otherProps", hideLogo);
   const classes = useStyles();
   const media = {
     phone: useMediaQuery(" (min-width: 200px) and (max-width: 480px)"),

@@ -8,7 +8,9 @@ const DrawerContainer = (props) => {
   return <Drawer {...props} />;
 };
 
-const mapStateToProps = ({ alphabets }) => ({});
+const mapStateToProps = ({ alphabets, language }) => ({
+  language: language,
+});
 
 const mapDispatchToProps = {
   setLanguage: setLanguage,

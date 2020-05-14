@@ -7,7 +7,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-
+import FormControl from "../formControl";
+import Box from "@material-ui/core/Box";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import EnglishAlphabet from "../alphabet";
@@ -81,6 +82,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     padding: "5px",
   },
+  nawMenu: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-between",
+  },
 }));
 
 const PersistentDrawerLeft = (props) => {
@@ -110,9 +116,10 @@ const PersistentDrawerLeft = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            {languageTitle[title]}
-          </Typography>
+          <Box component="div" className={classes.nawMenu}>
+            <h1>{languageTitle[title]}</h1>
+            <FormControl />
+          </Box>
         </Toolbar>
       </AppBar>
       <Router>
