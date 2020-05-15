@@ -8,7 +8,7 @@ export const languageTitle = {
 export const chooseLenguageAlphabet = {
   english: "Choose Languages",
   russian: "Выберите язык",
-  ukraine: "Виберыть мову",
+  ukraine: "Виберіть мову",
 };
 export const chooseDrawerNumber = {
   english: "Number",
