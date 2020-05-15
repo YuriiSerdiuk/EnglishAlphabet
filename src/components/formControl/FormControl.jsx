@@ -58,7 +58,6 @@ export default function CustomizedSelects(props) {
   const classes = useStyles();
   const [age, setAge] = React.useState("english");
   const handleChange = (event) => {
-    console.log("event.target.value", event.target.value);
     setLanguage(event.target.value);
     setAge(event.target.value);
   };

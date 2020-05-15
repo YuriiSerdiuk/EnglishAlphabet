@@ -1,5 +1,12 @@
 export const alphabet = ["english", "russian", "ukraine"];
 export const languages = ["english", "russian", "ukraine"];
+
+export const chooseLenguageData = {
+  english: ["english", "russian", "ukraine"],
+  russian: ["английский", "русский", "українский"],
+  ukraine: ["англійська", "російська", "українська"],
+};
+
 export const languageTitle = {
   english: "English Language",
   russian: "Русский язык",

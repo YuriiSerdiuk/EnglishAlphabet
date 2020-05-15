@@ -5,8 +5,6 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
@@ -25,6 +23,7 @@ import {
   chooseDrawerNumber,
   chooseDrawerSetting,
   chooseDrawerContacts,
+  chooseLenguageData,
 } from "../../constants/constant";
 const drawerWidth = 240;
 
@@ -95,7 +94,12 @@ const Draver = (props) => {
                 // setLanguage(text);
               }}
             >
-              <ListItemText primary={text} />
+              <ListItemText
+                primary={
+                  chooseLenguageData[language] &&
+                  chooseLenguageData[language][index]
+                }
+              />
             </Link>
           </ListItem>
         ))}
@@ -117,7 +121,7 @@ const Draver = (props) => {
                 // setLanguage(text);
               }}
             >
-              <ListItemText primary={text} />
+              <ListItemText primary={chooseDrawerNumber[language]} />
             </Link>
           </ListItem>
         ))}
@@ -135,7 +139,7 @@ const Draver = (props) => {
               <SettingsIcon />
             </ListItemIcon>
             <Link to={`/${text}`} onClick={() => {}}>
-              <ListItemText primary={text} />
+              <ListItemText primary={chooseDrawerSetting[language]} />
             </Link>
           </ListItem>
         ))}
@@ -153,7 +157,7 @@ const Draver = (props) => {
               <ContactPhoneIcon />
             </ListItemIcon>
             <Link to={`/${text}`} onClick={() => {}}>
-              <ListItemText primary={text} />
+              <ListItemText primary={chooseDrawerContacts[language]} />
             </Link>
           </ListItem>
         ))}
