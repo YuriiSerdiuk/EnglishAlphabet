@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, getLuminance } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -27,7 +27,14 @@ const useStyles = makeStyles((theme) => {
 });
 
 function FormRow(props) {
-  const { styleLaters, audioAlphabet, hideLogo } = props;
+  // console.log("props", props);
+  const {
+    styleLaters,
+    audioAlphabet,
+    hideLogo,
+    language,
+    audioNumbers,
+  } = props;
   const classes = useStyles();
   const media = {
     phone: useMediaQuery(" (min-width: 200px) and (max-width: 480px)"),
@@ -45,6 +52,8 @@ function FormRow(props) {
             <Paper
               key={letter}
               onClick={() => {
+                language &&
+                  makeSound(letter, Howl, Howler, audioNumbers[language]);
                 !hideLogo && makeSound(letter, Howl, Howler, audioAlphabet);
               }}
               className={classes[result && result[0]]}

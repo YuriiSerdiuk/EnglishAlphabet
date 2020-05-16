@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Numbers = (props) => {
   const classes = useStyles();
-
   const { numbers = [] } = props;
 
   return (

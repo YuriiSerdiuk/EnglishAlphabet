@@ -4,13 +4,14 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import NativeSelect from "@material-ui/core/NativeSelect";
 import InputBase from "@material-ui/core/InputBase";
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
     "label + &": {
-      //   marginTop: theme.spacing(3),
+      // marginTop: theme.spacing(3),
+      backgroundColor: "white",
+      borderRadius: "5px",
     },
   },
   input: {
@@ -46,8 +47,9 @@ const BootstrapInput = withStyles((theme) => ({
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
-    // marginTop: "20%",
-    backgroundColor: "white",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
   },
 }));
 
@@ -62,21 +64,19 @@ export default function CustomizedSelects(props) {
     setAge(event.target.value);
   };
   return (
-    <div>
-      <FormControl className={classes.margin}>
-        <InputLabel id="demo-customized-select-label"></InputLabel>
-        <Select
-          labelId="demo-customized-select-label"
-          id="demo-customized-select"
-          value={age}
-          onChange={handleChange}
-          input={<BootstrapInput />}
-        >
-          {languages.map((text) => {
-            return <MenuItem value={text}>{text}</MenuItem>;
-          })}
-        </Select>
-      </FormControl>
-    </div>
+    <FormControl className={classes.margin}>
+      <InputLabel id="demo-customized-select-label"></InputLabel>
+      <Select
+        labelId="demo-customized-select-label"
+        id="demo-customized-select"
+        value={age}
+        onChange={handleChange}
+        input={<BootstrapInput />}
+      >
+        {languages.map((text) => {
+          return <MenuItem value={text}>{text}</MenuItem>;
+        })}
+      </Select>
+    </FormControl>
   );
 }
