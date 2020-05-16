@@ -13,9 +13,9 @@ export const languageTitle = {
   ukraine: "Українська мова",
 };
 export const chooseLenguageAlphabet = {
-  english: "Choose Languages",
-  russian: "Выберите язык",
-  ukraine: "Виберіть мову",
+  english: "Alphabet",
+  russian: "Алфавит",
+  ukraine: "Алфавіт",
 };
 export const chooseDrawerNumber = {
   english: "Number",
