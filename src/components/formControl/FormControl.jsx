@@ -5,6 +5,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import InputBase from "@material-ui/core/InputBase";
+import ReactCountryFlag from "react-country-flag";
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -73,8 +74,12 @@ export default function CustomizedSelects(props) {
         onChange={handleChange}
         input={<BootstrapInput />}
       >
-        {languages.map((text) => {
-          return <MenuItem value={text}>{text}</MenuItem>;
+        {languages.map(({ language, code }) => {
+          return (
+            <MenuItem value={language}>
+              <ReactCountryFlag countryCode={code} svg /> {language}
+            </MenuItem>
+          );
         })}
       </Select>
     </FormControl>
