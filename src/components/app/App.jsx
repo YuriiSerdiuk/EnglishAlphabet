@@ -16,6 +16,7 @@ import RussianAlphabet from "../russianAlphabet";
 import UkraineAlphabet from "../ukraineAlphabet";
 import Numbers from "../numbers";
 import Contacts from "../contacts";
+import Setting from "../setting";
 
 import { languageTitle } from "../../constants/constant";
 
@@ -150,7 +151,7 @@ const PersistentDrawerLeft = (props) => {
               <Numbers />
             </Route>
             <Route path="/setting">
-              <p>configure setting</p>
+              <Setting />
             </Route>
             <Route path="/contacts">
               <Contacts />

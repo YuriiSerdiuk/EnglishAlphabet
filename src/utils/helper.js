@@ -1,9 +1,11 @@
-export const makeSound = (id, Howl, Howler, audioAlphabet) => {
+import { Howl, Howler } from "howler";
+
+export const makeSound = (id, audioAlphabet, value) => {
   const sound = new Howl({
     src: audioAlphabet[id],
   });
   sound.play();
-  Howler.volume(1.0);
+  Howler.volume(value);
 };
 
 export const getMediaQuery = (media) =>

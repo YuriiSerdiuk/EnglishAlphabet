@@ -1,9 +1,8 @@
 import React from "react";
-import { makeStyles, getLuminance } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import { Howl, Howler } from "howler";
 
 import Card from "../card";
 import { makeSound, getMediaQuery } from "../../utils/helper";
@@ -27,7 +26,7 @@ const useStyles = makeStyles((theme) => {
 });
 
 function FormRow(props) {
-  // console.log("props", props);
+  const { soundLoud } = props;
   const {
     styleLaters,
     audioAlphabet,
@@ -53,8 +52,8 @@ function FormRow(props) {
               key={letter}
               onClick={() => {
                 language &&
-                  makeSound(letter, Howl, Howler, audioNumbers[language]);
-                !hideLogo && makeSound(letter, Howl, Howler, audioAlphabet);
+                  makeSound(letter, audioNumbers[language], soundLoud);
+                !hideLogo && makeSound(letter, audioAlphabet, soundLoud);
               }}
               className={classes[result && result[0]]}
               elevation={3}

@@ -1,5 +1,5 @@
 import { MainState } from "../state";
-import { SET_LANGUAGE, INIT_LANGUAGES } from "../types";
+import { SET_LANGUAGE, INIT_LANGUAGES, SET_SOUND_VALUE } from "../types";
 import { languages } from "../../constants/constant";
 import { audioNumbers } from "../../constants/numbers";
 
@@ -17,6 +17,11 @@ export function rootReducer(state = MainState, action) {
       return {
         ...state,
         language: action.payload,
+      };
+    case SET_SOUND_VALUE:
+      return {
+        ...state,
+        settings: { soundLoud: action.payload },
       };
     default:
       return state;

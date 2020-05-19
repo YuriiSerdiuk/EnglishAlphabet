@@ -2,7 +2,7 @@ const initialState = {
   alphabets: {},
   language: "",
   constants: {},
-  settings: [],
+  settings: { soundLoud: 1 },
 };
 
 export default initialState;

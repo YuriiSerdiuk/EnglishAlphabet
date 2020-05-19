@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { Howl, Howler } from "howler";
 
 import { makeSound, getMediaQuery } from "../../utils/helper";
 
@@ -38,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Card = (props) => {
-  const { letter, src, name, audioAlphabet, hideLogo } = props;
+  const { letter, src, name, audioAlphabet, hideLogo, soundLoud } = props;
   const classes = useStyles();
   const media = {
     phone: useMediaQuery(" (min-width: 200px) and (max-width: 480px)"),
@@ -68,7 +67,7 @@ const Card = (props) => {
           />
           <p
             onClick={(e) => {
-              makeSound(name, Howl, Howler, audioAlphabet);
+              makeSound(name, audioAlphabet, soundLoud);
               e.stopPropagation();
             }}
             className={classes.imgText}
