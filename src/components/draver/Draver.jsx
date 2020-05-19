@@ -14,6 +14,7 @@ import DialpadIcon from "@material-ui/icons/Dialpad";
 import SortByAlphaIcon from "@material-ui/icons/SortByAlpha";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
 import SettingsIcon from "@material-ui/icons/Settings";
+import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 
 import { Link, withRouter } from "react-router-dom";
 
@@ -127,6 +128,19 @@ const Draver = (props) => {
         ))}
       </List>
       <Divider />
+      <Typography className={classes.dividerTitle}>{"Games "}</Typography>
+      <List>
+        {["games"].map((text, index) => (
+          <ListItem key={text}>
+            <ListItemIcon>
+              <SportsEsportsIcon />
+            </ListItemIcon>
+            <Link to={`/${text}`} onClick={() => {}}>
+              <ListItemText primary={text} />
+            </Link>
+          </ListItem>
+        ))}
+      </List>
       <Divider />
       <Typography className={classes.dividerTitle}>
         {" "}
@@ -144,7 +158,6 @@ const Draver = (props) => {
           </ListItem>
         ))}
       </List>
-      <Divider />
       <Divider />
       <Typography className={classes.dividerTitle}>
         {" "}
