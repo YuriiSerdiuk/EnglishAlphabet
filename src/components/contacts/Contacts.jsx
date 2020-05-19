@@ -7,6 +7,7 @@ import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import ContactMailIcon from "@material-ui/icons/ContactMail";
 import PhoneIcon from "@material-ui/icons/Phone";
+import Card from "../base/contactCard";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,22 +42,38 @@ export default function SimpleContainer() {
             <PhoneIcon /> +(380)938990630{" "}
           </Typography>
         </Box>
-        <Grid container>
-          <Grid item xs={3}>
-            {" "}
-            <p>yuraserdiuk@gmail.com</p>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={3}>
+            <Card
+              type="mail"
+              title="Электронная почта"
+              subTitle="yuraserdiuk@gmail.com"
+              href="mailto:yuraserdiuk@gmail.com"
+            />
           </Grid>
-          <Grid item xs={3}>
-            {" "}
-            <a href="https://t.me/learnalphabet">t.me/learnalphabet</a>
+          <Grid item xs={12} sm={3}>
+            <Card
+              type="telegram"
+              href="https://t.me/learnalphabet"
+              subTitle="t.me/learnalphabet"
+              title="telegram"
+            />
           </Grid>
-          <Grid item xs={3}>
-            {" "}
-            <p>yuretskiyyurka</p>
+          <Grid item xs={12} sm={3}>
+            <Card
+              type="instagram"
+              subTitle="yuretskiyyurka"
+              href="https://www.instagram.com/yuretskiyyurka"
+              title="instagram"
+            />
           </Grid>
-          <Grid item xs={3}>
-            {" "}
-            <p>linkedin</p>
+          <Grid item xs={12} sm={3}>
+            <Card
+              type="gitHub"
+              subTitle="UraSerdyuk"
+              href="https://github.com/UraSerdyuk"
+              title="gitHub"
+            />
           </Grid>
         </Grid>
       </Container>
