@@ -127,10 +127,13 @@ const PersistentDrawerLeft = (props) => {
             <h1>{languageTitle[title]}</h1>
 
             <div className={clsx(classes.control)}>
-              {showValue && <SoundControl hide />}
+              {showValue && <SoundControl hide setShowValue={setShowValue} />}
               <VolumeUpIcon
-                onClick={() => {
-                  setShowValue(!showValue);
+                onMouseEnter={() => {
+                  setShowValue(true);
+                }}
+                onMouseLeave={() => {
+                  setShowValue(false);
                 }}
               />
               <FormControl />

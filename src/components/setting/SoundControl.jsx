@@ -43,7 +43,7 @@ const PrettoSlider = withStyles({
 })(Slider);
 
 export default function ContinuousSlider(props) {
-  const { soundLoud, setSoundValue, hide } = props;
+  const { soundLoud, setSoundValue, hide, setShowValue } = props;
   const classes = useStyles();
 
   const handleChange = (event, newValue) => {
@@ -54,7 +54,16 @@ export default function ContinuousSlider(props) {
     <div className={classes.root}>
       <Typography id="continuous-slider" gutterBottom></Typography>
       {!hide && <h2>Sound Configuration</h2>}
-      <Grid container spacing={2}>
+      <Grid
+        container
+        spacing={2}
+        onMouseEnter={() => {
+          setShowValue && setShowValue(true);
+        }}
+        onMouseLeave={() => {
+          setShowValue && setShowValue(false);
+        }}
+      >
         <Grid item>{!hide && <VolumeDown />}</Grid>
         <Grid item xs>
           <PrettoSlider
