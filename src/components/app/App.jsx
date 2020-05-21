@@ -6,6 +6,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import VolumeUpIcon from "@material-ui/icons/VolumeUp";
 import FormControl from "../formControl";
 import Box from "@material-ui/core/Box";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -18,6 +19,7 @@ import Numbers from "../numbers";
 import Contacts from "../contacts";
 import Setting from "../setting";
 import Games from "../games";
+import SoundControl from "../setting";
 
 import { languageTitle } from "../../constants/constant";
 
@@ -90,11 +92,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     fontSize: "10px",
   },
+  control: { display: "flex", alignItems: "center" },
 }));
 
 const PersistentDrawerLeft = (props) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [showValue, setShowValue] = React.useState(false);
   const { title = "" } = props;
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -121,7 +125,16 @@ const PersistentDrawerLeft = (props) => {
           </IconButton>
           <Box component="div" className={classes.nawMenu}>
             <h1>{languageTitle[title]}</h1>
-            <FormControl />
+
+            <div className={clsx(classes.control)}>
+              {showValue && <SoundControl hide />}
+              <VolumeUpIcon
+                onClick={() => {
+                  setShowValue(!showValue);
+                }}
+              />
+              <FormControl />
+            </div>
           </Box>
         </Toolbar>
       </AppBar>

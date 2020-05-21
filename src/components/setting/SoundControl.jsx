@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
@@ -12,8 +12,38 @@ const useStyles = makeStyles({
   },
 });
 
+const PrettoSlider = withStyles({
+  root: {
+    color: "#52af77",
+    height: 8,
+  },
+  thumb: {
+    height: 24,
+    width: 24,
+    backgroundColor: "#fff",
+    border: "2px solid currentColor",
+    marginTop: -8,
+    marginLeft: -12,
+    "&:focus, &:hover, &$active": {
+      boxShadow: "inherit",
+    },
+  },
+  active: {},
+  valueLabel: {
+    left: "calc(-50% + 4px)",
+  },
+  track: {
+    height: 8,
+    borderRadius: 4,
+  },
+  rail: {
+    height: 8,
+    borderRadius: 4,
+  },
+})(Slider);
+
 export default function ContinuousSlider(props) {
-  const { soundLoud, setSoundValue } = props;
+  const { soundLoud, setSoundValue, hide } = props;
   const classes = useStyles();
 
   const handleChange = (event, newValue) => {
@@ -22,23 +52,18 @@ export default function ContinuousSlider(props) {
 
   return (
     <div className={classes.root}>
-      <Typography id="continuous-slider" gutterBottom>
-        Sistem Volume
-      </Typography>
+      <Typography id="continuous-slider" gutterBottom></Typography>
+      {!hide && <h2>Sound Configuration</h2>}
       <Grid container spacing={2}>
-        <Grid item>
-          <VolumeDown />
-        </Grid>
+        <Grid item>{!hide && <VolumeDown />}</Grid>
         <Grid item xs>
-          <Slider
+          <PrettoSlider
             value={soundLoud * 100}
             onChange={handleChange}
             aria-labelledby="continuous-slider"
           />
         </Grid>
-        <Grid item>
-          <VolumeUp />
-        </Grid>
+        <Grid item>{!hide && <VolumeUp />}</Grid>
       </Grid>
       {/* <Typography id="disabled-slider" gutterBottom>
         Disabled slider
