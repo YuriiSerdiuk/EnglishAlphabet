@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import ContactMailIcon from "@material-ui/icons/ContactMail";
-import PhoneIcon from "@material-ui/icons/Phone";
+
 import Card from "../base/contactCard";
 
 const useStyles = makeStyles((theme) => ({
@@ -39,7 +39,7 @@ export default function SimpleContainer() {
           </Typography>
           <Typography variant="h4">
             {" "}
-            <PhoneIcon /> +(380)938990630{" "}
+            {/* <PhoneIcon /> +(380)938990630{" "} */}
           </Typography>
         </Box>
         <Grid container spacing={3}>
@@ -73,6 +73,14 @@ export default function SimpleContainer() {
               subTitle="UraSerdyuk"
               href="https://github.com/UraSerdyuk"
               title="gitHub"
+            />
+          </Grid>
+          <Grid item xs={12} sm={3}>
+            <Card
+              type="phone"
+              subTitle="+(380)93-899-06-30"
+              href="tel:+380938990630"
+              title="my phone number"
             />
           </Grid>
         </Grid>

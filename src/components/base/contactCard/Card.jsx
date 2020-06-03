@@ -9,6 +9,7 @@ import MailIcon from "@material-ui/icons/Mail";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import PhoneIcon from "@material-ui/icons/Phone";
 
 const useStyles = makeStyles({
   root: {},
@@ -30,12 +31,11 @@ const typeIcon = {
   telegram: <TelegramIcon />,
   instagram: <InstagramIcon />,
   gitHub: <GitHubIcon />,
+  phone: <PhoneIcon />,
 };
 
 export default function SimpleCard(props) {
   const { type, title, href, subTitle } = props;
-
-  console.log(props);
   const classes = useStyles();
 
   return (
