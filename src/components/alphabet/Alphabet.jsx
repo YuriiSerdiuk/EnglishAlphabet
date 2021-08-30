@@ -18,7 +18,7 @@ export default function NestedGrid(props) {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid container item xs spacing={3} className={classes.greed}>
+        <Grid container item xs spacing={1} className={classes.greed}>
           <FormRow styleLaters={styleAlphabet} {...props} />
         </Grid>
       </Grid>
