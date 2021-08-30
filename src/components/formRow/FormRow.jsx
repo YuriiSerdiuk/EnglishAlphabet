@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => {
     root: {
       flexGrow: 1,
     },
+    pointer:{ cursor:"pointer"},
     paper: { ...defaultStyle },
     phone: { ...defaultStyle, backgroundColor: "#ffff0042" },
     laptop: { ...defaultStyle, backgroundColor: "#ffff0042" },
@@ -55,7 +56,7 @@ function FormRow(props) {
                   makeSound(letter, audioNumbers[language], soundLoud);
                 !hideLogo && makeSound(letter, audioAlphabet, soundLoud);
               }}
-              className={classes[result && result[0]]}
+              className={`${classes[result && result[0]]} ${classes.pointer}`}
               elevation={3}
               style={{
                 color: `${color}`,

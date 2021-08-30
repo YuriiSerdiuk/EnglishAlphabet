@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   img: { width: "80%" },
   imgText: {
-    fontSize: "20px",
+    fontSize: "1rem",
     color: "black",
     textAlign: "center",
     textShadow: "0 0 0 ",
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   phone: {
     width: "100%",
     textAlign: "center",
-    fontSize: "80px",
+    fontSize: "3rem",
   },
   number: {
     textAlign: "center",
