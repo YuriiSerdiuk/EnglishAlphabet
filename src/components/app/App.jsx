@@ -125,7 +125,7 @@ const PersistentDrawerLeft = (props) => {
             <MenuIcon />
           </IconButton>
           <Box component="div" className={classes.nawMenu}>
-            <h1 className={classes.title} >{languageTitle[title]}</h1>
+            {/*<h1 className={classes.title} >{languageTitle[title]}</h1>*/}
 
             <div className={clsx(classes.control)}>
               {showValue && <SoundControl hide setShowValue={setShowValue} />}
