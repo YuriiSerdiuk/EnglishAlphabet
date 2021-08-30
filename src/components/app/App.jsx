@@ -93,6 +93,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "10px",
   },
   control: { display: "flex", alignItems: "center" },
+  title:{fontSize:'1rem',display:'flex',alignItems:'center'}
 }));
 
 const PersistentDrawerLeft = (props) => {
@@ -124,7 +125,7 @@ const PersistentDrawerLeft = (props) => {
             <MenuIcon />
           </IconButton>
           <Box component="div" className={classes.nawMenu}>
-            <h1>{languageTitle[title]}</h1>
+            <h1 className={classes.title} >{languageTitle[title]}</h1>
 
             <div className={clsx(classes.control)}>
               {showValue && <SoundControl hide setShowValue={setShowValue} />}
