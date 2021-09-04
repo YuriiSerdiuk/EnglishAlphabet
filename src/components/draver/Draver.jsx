@@ -51,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Draver = (props) => {
-  // console.log(props);
   const { open, setOpen, language } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -80,9 +79,6 @@ const Draver = (props) => {
         </IconButton>
       </div>
       <Divider />
-      <Typography className={classes.dividerTitle}>
-        {chooseLenguageAlphabet[language]}
-      </Typography>
       <List>
         {alphabet.map((text, index) => (
           <ListItem key={text}>
@@ -104,10 +100,6 @@ const Draver = (props) => {
         ))}
       </List>
       <Divider />
-      <Typography className={classes.dividerTitle}>
-        {" "}
-        {chooseDrawerNumber[language]}
-      </Typography>
       <List>
         {["numbers"].map((text, index) => (
           <ListItem key={text}>
@@ -124,7 +116,6 @@ const Draver = (props) => {
         ))}
       </List>
       <Divider />
-      <Typography className={classes.dividerTitle}>{"Games "}</Typography>
       <List>
         {["games"].map((text, index) => (
           <ListItem key={text}>
@@ -138,10 +129,6 @@ const Draver = (props) => {
         ))}
       </List>
       <Divider />
-      <Typography className={classes.dividerTitle}>
-        {" "}
-        {chooseDrawerSetting[language]}
-      </Typography>
       <List>
         {["setting"].map((text, index) => (
           <ListItem key={text}>
@@ -155,10 +142,6 @@ const Draver = (props) => {
         ))}
       </List>
       <Divider />
-      <Typography className={classes.dividerTitle}>
-        {" "}
-        {chooseDrawerContacts[language]}
-      </Typography>
       <List>
         {["contacts"].map((text, index) => (
           <ListItem key={text}>
