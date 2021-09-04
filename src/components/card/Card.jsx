@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   number: {
     textAlign: "center",
     width: "100%",
-    fontSize: "80px",
+    fontSize: "3rem",
   },
 }));
 
