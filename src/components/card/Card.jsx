@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
   },
-  letter: { flexGrow: 1, width: "100%", fontSize: "100px" },
+  letter: { flexGrow: 1, width: "100%", fontSize: "100px", textAlign:"center" },
 
   imgBlock: {
     width: "100%",

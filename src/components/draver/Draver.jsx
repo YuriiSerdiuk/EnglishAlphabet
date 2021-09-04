@@ -91,9 +91,7 @@ const Draver = (props) => {
             </ListItemIcon>
             <Link
               to={`/${text}`}
-              onClick={() => {
-                // setLanguage(text);
-              }}
+              onClick={handleDrawerClose}
             >
               <ListItemText
                 primary={
@@ -118,9 +116,7 @@ const Draver = (props) => {
             </ListItemIcon>
             <Link
               to={`/${text}`}
-              onClick={() => {
-                // setLanguage(text);
-              }}
+              onClick={handleDrawerClose}
             >
               <ListItemText primary={chooseDrawerNumber[language]} />
             </Link>
@@ -135,7 +131,7 @@ const Draver = (props) => {
             <ListItemIcon>
               <SportsEsportsIcon />
             </ListItemIcon>
-            <Link to={`/${text}`} onClick={() => {}}>
+            <Link to={`/${text}`} onClick={ handleDrawerClose}>
               <ListItemText primary={text} />
             </Link>
           </ListItem>
@@ -152,7 +148,7 @@ const Draver = (props) => {
             <ListItemIcon>
               <SettingsIcon />
             </ListItemIcon>
-            <Link to={`/${text}`} onClick={() => {}}>
+            <Link to={`/${text}`} onClick={handleDrawerClose}>
               <ListItemText primary={chooseDrawerSetting[language]} />
             </Link>
           </ListItem>
@@ -169,7 +165,7 @@ const Draver = (props) => {
             <ListItemIcon>
               <ContactPhoneIcon />
             </ListItemIcon>
-            <Link to={`/${text}`} onClick={() => {}}>
+            <Link to={`/${text}`} onClick={handleDrawerClose}>
               <ListItemText primary={chooseDrawerContacts[language]} />
             </Link>
           </ListItem>
