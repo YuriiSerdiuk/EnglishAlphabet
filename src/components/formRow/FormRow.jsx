@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => {
   const defaultStyle = {
     padding: theme.spacing(2),
     textAlign: "start",
-    textShadow: "5px 1px 3px black",
+    textShadow: "5px 1px 3px #969eb1",
     color: theme.palette.text.secondary,
   };
   return {
