@@ -89,8 +89,8 @@ const useStyles = makeStyles((theme) => ({
   nawMenu: {
     width: "100%",
     display: "flex",
-    justifyContent: "space-between",
     fontSize: "10px",
+    justifyContent:'flex-end',
   },
   control: { display: "flex", alignItems: "center" },
   title:{fontSize:'1rem',display:'flex',alignItems:'center'}
