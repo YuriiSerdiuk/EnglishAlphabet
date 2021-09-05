@@ -66,7 +66,7 @@ export default function CustomizedSelects(props) {
   };
   return (
     <FormControl className={classes.margin}>
-      <InputLabel id="demo-customized-select-label"></InputLabel>
+      <InputLabel id="demo-customized-select-label"/>
       <Select
         labelId="demo-customized-select-label"
         id="demo-customized-select"
@@ -76,7 +76,7 @@ export default function CustomizedSelects(props) {
       >
         {languages.map(({ language, code }) => {
           return (
-            <MenuItem value={language}>
+            <MenuItem value={language} key={language + '' + code }>
               <ReactCountryFlag countryCode={code} svg /> {language}
             </MenuItem>
           );
