@@ -56,7 +56,7 @@ function FormRow(props) {
                   makeSound(letter, audioNumbers[language], soundLoud);
                 !hideLogo && makeSound(letter, audioAlphabet, soundLoud);
               }}
-              className={`${classes[result && result[0]]} ${classes.pointer}`}
+              className={`${classes[result && result[0]]} ${classes.pointer} `}
               elevation={3}
               style={{
                 color: `${color}`,

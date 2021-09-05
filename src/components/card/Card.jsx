@@ -51,9 +51,9 @@ const Card = (props) => {
     <div className={classes.card}>
       <div
         className={
-          hideLogo
+          `${hideLogo
             ? classes.number
-            : classes[phoneValidate ? "phone" : "letter"]
+            : classes[phoneValidate ? "phone" : "letter"]} unselectable`
         }
       >
         {letter}
@@ -70,7 +70,7 @@ const Card = (props) => {
               makeSound(name, audioAlphabet, soundLoud);
               e.stopPropagation();
             }}
-            className={classes.imgText}
+            className={`${classes.imgText} unselectable`}
           >
             {name ? name : "text"}
           </p>
