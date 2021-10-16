@@ -59,10 +59,13 @@ import устриця from "../assets/ukraineAudio/устриця.mp3";
 import фламінго from "../assets/ukraineAudio/фламінго.mp3";
 import хом_як from "../assets/ukraineAudio/хом'як.mp3";
 import цукерка from "../assets/ukraineAudio/цукерка.mp3";
+import цуценя from "../assets/ukraineAudio/цуценя.mp3";
 import черепаха from "../assets/ukraineAudio/черепаха.mp3";
 import шишка from "../assets/ukraineAudio/шишка.mp3";
-import щеня from "../assets/ukraineAudio/щеня.mp3";
-import юрок from "../assets/ukraineAudio/юрок.mp3";
+import щука from "../assets/ukraineAudio/щука.mp3";
+// import щеня from "../assets/ukraineAudio/щеня.mp3";
+// import юрок from "../assets/ukraineAudio/юрок.mp3";
+import юла from "../assets/ukraineAudio/юла.mp3";
 import ялинка from "../assets/ukraineAudio/ялинка.mp3";
 
 export const ukraineAlphabet = [
@@ -225,8 +228,9 @@ export const ukraineAlphabet = [
   {
     letter: "Ц",
     color: "#F7901B",
-    src: "https://image.flaticon.com/icons/svg/2913/2913748.svg",
-    name: "Цукерка",
+    src: "https://image.flaticon.com/icons/svg/1279/1279250.svg",
+    // src: "https://image.flaticon.com/icons/svg/2913/2913748.svg",
+    name: "Цуценя",
   },
   {
     letter: "Ч",
@@ -243,8 +247,9 @@ export const ukraineAlphabet = [
   {
     letter: "Щ",
     color: "#02AFE8",
-    src: "https://image.flaticon.com/icons/svg/1279/1279250.svg",
-    name: "Щеня",
+    src: "https://cdn-icons-png.flaticon.com/512/1134/1134431.png",
+    //src: "https://image.flaticon.com/icons/svg/1279/1279250.svg",
+    name: "Щука",
   },
   {
     letter: "Ь",
@@ -255,8 +260,9 @@ export const ukraineAlphabet = [
   {
     letter: "Ю",
     color: "#F99B28",
-    src: "https://image.flaticon.com/icons/svg/826/826910.svg",
-    name: "Юрок",
+    src: "https://cdn-icons-png.flaticon.com/512/3736/3736053.png",
+    // src: "https://image.flaticon.com/icons/svg/826/826910.svg",
+    name: "Юла",
   },
   {
     letter: "Я",
@@ -326,10 +332,11 @@ export const audioUkraineAlphabet = {
   Устриця: устриця,
   Фламінго: фламінго,
   [`Хом\'як`]: хом_як,
-  Цукерка: цукерка,
+  Цуценя: цуценя,
   Черепаха: черепаха,
   Шишка: шишка,
-  Щеня: щеня,
-  Юрок: юрок,
+  Щука: щука,
+  // Юрок: юрок,
+  Юла: юла,
   Ялинка: ялинка,
 };
