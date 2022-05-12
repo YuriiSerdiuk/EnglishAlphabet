@@ -1,3 +1,4 @@
+//sound
 import a from "../../assets/audio/letter-a.mp3";
 import b from "../../assets/audio/letter-b.mp3";
 import c from "../../assets/audio/letter-c.mp3";
@@ -51,6 +52,34 @@ import wolf from "../../assets/audio/wolf.mp3";
 import xylophone from "../../assets/audio/xylophone.mp3";
 import yoyo from "../../assets/audio/yoyo.mp3";
 import zebra from "../../assets/audio/zebra.mp3";
+
+//images
+import bananaPng from '../icon/banana.png';
+import applePng from '../icon/apple.png';
+import catPng from '../icon/cat.png';
+import dogPng from '../icon/dog.png';
+import elephantPng from '../icon/elephant.png';
+import foxPng from '../icon/fox.png';
+import giraffePng from '../icon/giraffe.png';
+import hatPng from '../icon/hat.png';
+import ice_creamPng from '../icon/ice-cream.png';
+import juicePng from '../icon/orange-juice.png';
+import keyPng from '../icon/key.png';
+import lionPng from '../icon/lion.png';
+import mousePng from '../icon/mouse.png';
+import nutPng from '../icon/nut.png';
+import orangePng from '../icon/orange.png';
+import pandaPng from '../icon/panda.png';
+import queenPng from '../icon/queen.png';
+import rabbitPng from '../icon/rabbit.png';
+import sunPng from '../icon/sun.png';
+import tigerPng from '../icon/tiger.png';
+import unicornPng from '../icon/unicorn.png';
+import vasePng from '../icon/vase.png';
+import xylophonePng from '../icon/xylophone-instrument.png';
+import wolfPng from '../icon/wolf.png';
+import yoyoPng from '../icon/yoyo.png';
+import zebraPng from '../icon/zebra.png';
 
 export const audioAlphabet = {
   A: a,
@@ -141,7 +170,7 @@ export const styleAlphabet = [
     letter: "A",
     color: "#F06543",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/826/826900.svg",
+    src: applePng,
     name: "Apple",
   },
 
@@ -149,175 +178,175 @@ export const styleAlphabet = [
     letter: "B",
     color: "#F99B28",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/2293/2293014.svg",
+    src: bananaPng,
     name: "Banana",
   },
   {
     letter: "C",
     color: "#FEF723",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/1998/1998592.svg",
+    src: catPng,
     name: "Cat",
   },
   {
     letter: "D",
     color: "#B5D444",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/2829/2829818.svg",
+    src: dogPng ,
     name: "Dog",
   },
   {
     letter: "E",
     color: "#0AADE8",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/1998/1998642.svg",
+    src: elephantPng,
     name: "Elephant",
   },
   {
     letter: "F",
     color: "#EA259D",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/2622/2622235.svg",
+    src: foxPng,
     name: "Fox",
   },
   {
     letter: "G",
     color: "#363190",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/2395/2395826.svg",
+    src: giraffePng,
     name: "Giraffe",
   },
   {
     letter: "H",
     color: "#F9403C",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/2790/2790122.svg",
+    src: hatPng,
     name: "Hat",
   },
   {
     letter: "I",
     color: "#F5901E",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/648/648770.svg",
+    src:ice_creamPng,
     name: "Ice Cream",
   },
   {
     letter: "J",
     color: "#FFF11A",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/648/648575.svg",
+    src: juicePng,
     name: "Juice",
   },
   {
     letter: "K",
     color: "#B7D340",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/742/742458.svg",
+    src: keyPng,
     name: "Key",
   },
   {
     letter: "L",
     color: "#0AADE9",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/2395/2395860.svg",
+    src: lionPng,
     name: "Lion",
   },
   {
     letter: "M",
     color: "#EA008D",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/png/512/2817/2817912.png",
+    src: mousePng,
     name: "Mouse",
   },
   {
     letter: "N",
     color: "#2E2B92",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/2435/2435667.svg",
+    src: nutPng,
     name: "Nut",
   },
   {
     letter: "O",
     color: "#F6A01A",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/451/451945.svg",
+    src:orangePng,
     name: "Orange",
   },
   {
     letter: "P",
     color: "#F59120",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/1807/1807746.svg",
+    src: pandaPng,
     name: "Panda",
   },
   {
     letter: "Q",
     color: "#F8EA13",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/png/512/2742/2742188.png",
+    src: queenPng,
     name: "Queen",
   },
   {
     letter: "R",
     color: "#B3D43A",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/1998/1998765.svg",
+    src: rabbitPng,
     name: "Rabbit",
   },
   {
     letter: "S",
     color: "#04ACE4",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/png/512/826/826955.png",
+    src: sunPng,
     name: "Sun",
   },
   {
     letter: "T",
     color: "#D9077D",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/png/512/375/375073.png",
+    src: tigerPng,
     name: "Tiger",
   },
   {
     letter: "U",
     color: "#2E2E8C",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/477/477102.svg",
+    src: unicornPng,
     name: "Unicorn",
   },
   {
     letter: "V",
     color: "#ED3131",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/2569/2569951.svg",
+    src: vasePng,
     name: "Vase",
   },
   {
     letter: "W",
     color: "#F7901B",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/123/123158.svg",
+    src: wolfPng,
     name: "Wolf",
   },
   {
     letter: "X",
     color: "#F9F506",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/2308/2308044.svg",
+    src: xylophonePng,
     name: "Xylophone",
   },
   {
     letter: "Y",
     color: "#B7D64A",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/581/581780.svg",
+    src: yoyoPng,
     name: "Yoyo",
   },
   {
     letter: "Z",
     color: "#02AFE8",
     borderColor: "#A82525",
-    src: "https://image.flaticon.com/icons/svg/1998/1998813.svg",
+    src: zebraPng,
     name: "Zebra",
   },
 ];
