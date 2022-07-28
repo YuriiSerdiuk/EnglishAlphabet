@@ -9,17 +9,13 @@ import MenuIcon from "@material-ui/icons/Menu";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
 import FormControl from "../formControl";
 import Box from "@material-ui/core/Box";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import EnglishAlphabet from "../alphabet";
 import Draver from "../draver";
-import RussianAlphabet from "../russianAlphabet";
-import UkraineAlphabet from "../ukraineAlphabet";
-import Numbers from "../numbers";
-import Contacts from "../contacts";
-import Setting from "../setting";
-import Games from "../games";
 import SoundControl from "../setting";
+
+
+import RoutesComponent from '../../routes'
 
 const drawerWidth = 240;
 
@@ -147,16 +143,7 @@ const PersistentDrawerLeft = () => {
             [classes.contentShift]: open,
           })}
         >
-          <Routes>
-            <Route path="/" element={<EnglishAlphabet />} />
-            <Route path="/english" element={<EnglishAlphabet />} />
-            <Route path="/ukraine" element={<UkraineAlphabet />} />
-            <Route path="/russian" element={<RussianAlphabet />} />
-            <Route path="/numbers" element={<Numbers />} />
-            <Route path="/games" element={<Games />} />
-            <Route path="/setting" element={<Setting />} />
-            <Route path="/contacts" element={<Contacts />} />
-          </Routes>
+          <RoutesComponent/>
         </main>
       </BrowserRouter>
     </div>

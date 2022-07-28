@@ -1,9 +1,16 @@
+import React from 'react';
+import EnglishLetterPronunciation from "../components/game/EnglishLetterPronunciation";
+
 export const alphabet = ["english", "russian", "ukraine"];
 export const languages = [
   { language: "english", code: "US" },
   { language: "russian", code: "RU" },
   { language: "ukraine", code: "UA" },
 ];
+
+export const GamesConfig = {
+  ['english-letter-pronunciation'] : <EnglishLetterPronunciation/>
+}
 
 export const chooseLenguageData = {
   english: ["english", "russian", "ukraine"],
