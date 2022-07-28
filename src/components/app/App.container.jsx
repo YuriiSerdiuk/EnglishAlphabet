@@ -1,22 +1,17 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import { useDispatch } from 'react-redux'
 
 import App from "./App";
 import { init } from "../../store/actions/alphabet";
 
-const AppContainer = ({ initLanguage, otherProps, title }) => {
+const AppContainer = ( ) => {
+  const dispatch = useDispatch()
+
   useEffect(() => {
-    initLanguage();
-  }, [initLanguage]);
-  return <App {...otherProps} title={title} />;
+    dispatch(init())
+  }, [dispatch]);
+
+  return <App  />;
 };
 
-const mapStateToProps = (state) => {
-  return { title: state.language };
-};
-
-const mapDispatchToProps = {
-  initLanguage: init,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
+export default AppContainer;

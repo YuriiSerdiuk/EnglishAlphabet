@@ -8,7 +8,6 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import DialpadIcon from "@material-ui/icons/Dialpad";
 import SortByAlphaIcon from "@material-ui/icons/SortByAlpha";
@@ -20,7 +19,6 @@ import { Link, withRouter } from "react-router-dom";
 
 import {
   alphabet,
-  chooseLenguageAlphabet,
   chooseDrawerNumber,
   chooseDrawerSetting,
   chooseDrawerContacts,

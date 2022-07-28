@@ -21,8 +21,6 @@ import Setting from "../setting";
 import Games from "../games";
 import SoundControl from "../setting";
 
-import { languageTitle } from "../../constants/constant";
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -96,11 +94,11 @@ const useStyles = makeStyles((theme) => ({
   title:{fontSize:'1rem',display:'flex',alignItems:'center'}
 }));
 
-const PersistentDrawerLeft = (props) => {
+const PersistentDrawerLeft = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [showValue, setShowValue] = React.useState(false);
-  const { title = "" } = props;
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
