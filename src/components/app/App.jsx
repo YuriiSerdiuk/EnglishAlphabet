@@ -9,7 +9,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
 import FormControl from "../formControl";
 import Box from "@material-ui/core/Box";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import EnglishAlphabet from "../alphabet";
 import Draver from "../draver";
@@ -20,8 +20,6 @@ import Contacts from "../contacts";
 import Setting from "../setting";
 import Games from "../games";
 import SoundControl from "../setting";
-
-import { languageTitle } from "../../constants/constant";
 
 const drawerWidth = 240;
 
@@ -96,11 +94,11 @@ const useStyles = makeStyles((theme) => ({
   title:{fontSize:'1rem',display:'flex',alignItems:'center'}
 }));
 
-const PersistentDrawerLeft = (props) => {
+const PersistentDrawerLeft = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [showValue, setShowValue] = React.useState(false);
-  const { title = "" } = props;
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -142,44 +140,25 @@ const PersistentDrawerLeft = (props) => {
           </Box>
         </Toolbar>
       </AppBar>
-      <Router>
+      <BrowserRouter>
         <Draver open={open} setOpen={setOpen} />
         <main
           className={clsx(classes.content, {
             [classes.contentShift]: open,
           })}
         >
-          <Switch>
-            <Route exact path="/">
-              <EnglishAlphabet />
-            </Route>
-            <Route exact path="/english">
-              <EnglishAlphabet />
-            </Route>
-            <Route path="/ukraine">
-              <UkraineAlphabet />
-            </Route>
-            <Route path="/russian">
-              <RussianAlphabet />
-            </Route>
-            <Route path="/german">
-              <p>German alphabet</p>
-            </Route>
-            <Route path="/numbers">
-              <Numbers />
-            </Route>
-            <Route path="/games">
-              <Games />
-            </Route>
-            <Route path="/setting">
-              <Setting />
-            </Route>
-            <Route path="/contacts">
-              <Contacts />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/" element={<EnglishAlphabet />} />
+            <Route path="/english" element={<EnglishAlphabet />} />
+            <Route path="/ukraine" element={<UkraineAlphabet />} />
+            <Route path="/russian" element={<RussianAlphabet />} />
+            <Route path="/numbers" element={<Numbers />} />
+            <Route path="/games" element={<Games />} />
+            <Route path="/setting" element={<Setting />} />
+            <Route path="/contacts" element={<Contacts />} />
+          </Routes>
         </main>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 };

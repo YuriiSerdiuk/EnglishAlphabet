@@ -1,19 +1,12 @@
 import React from "react";
-import Drawer from "./Draver";
-import { setLanguage } from "../../store/actions/language";
+import { useSelector } from 'react-redux'
 
-import { connect } from "react-redux";
+import Drawer from "./Draver";
 
 const DrawerContainer = (props) => {
-  return <Drawer {...props} />;
+  const language = useSelector((state) => state.language)
+
+  return <Drawer language={language} {...props}  />;
 };
 
-const mapStateToProps = ({ alphabets, language }) => ({
-  language: language,
-});
-
-const mapDispatchToProps = {
-  setLanguage: setLanguage,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(DrawerContainer);
+export default DrawerContainer;

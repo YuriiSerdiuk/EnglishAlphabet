@@ -57,8 +57,8 @@ import сонце from "../../assets/ukraineAudio/сонце.mp3";
 import тигр from "../../assets/ukraineAudio/тигр.mp3";
 import устриця from "../../assets/ukraineAudio/устриця.mp3";
 import фламінго from "../../assets/ukraineAudio/фламінго.mp3";
+// eslint-disable-next-line
 import хом_як from "../../assets/ukraineAudio/хом\'як.mp3";
-import цукерка from "../../assets/ukraineAudio/цукерка.mp3";
 import цуценя from "../../assets/ukraineAudio/цуценя.mp3";
 import черепаха from "../../assets/ukraineAudio/черепаха.mp3";
 import шишка from "../../assets/ukraineAudio/шишка.mp3";
@@ -361,6 +361,7 @@ export const audioUkraineAlphabet = {
   Тигр: тигр,
   Устриця: устриця,
   Фламінго: фламінго,
+  // eslint-disable-next-line
   [`Хом\'як`]: хом_як,
   Цуценя: цуценя,
   Черепаха: черепаха,
