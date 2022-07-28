@@ -52,7 +52,7 @@ import машина from "../../assets/ukraineAudio/машина.mp3";
 import нитка from "../../assets/ukraineAudio/нитка.mp3";
 import огірок from "../../assets/ukraineAudio/огірок.mp3";
 import папуга from "../../assets/ukraineAudio/папуга.mp3";
-import ракета from "../../assets/ukraineAudio/ракета.mp3";
+import рак from "../../assets/ukraineAudio/рак.mp3";
 import сонце from "../../assets/ukraineAudio/сонце.mp3";
 import тигр from "../../assets/ukraineAudio/тигр.mp3";
 import устриця from "../../assets/ukraineAudio/устриця.mp3";
@@ -63,8 +63,6 @@ import цуценя from "../../assets/ukraineAudio/цуценя.mp3";
 import черепаха from "../../assets/ukraineAudio/черепаха.mp3";
 import шишка from "../../assets/ukraineAudio/шишка.mp3";
 import щука from "../../assets/ukraineAudio/щука.mp3";
-// import щеня from "../assets/ukraineAudio/щеня.mp3";
-// import юрок from "../assets/ukraineAudio/юрок.mp3";
 import юла from "../../assets/ukraineAudio/юла.mp3";
 import ялинка from "../../assets/ukraineAudio/ялинка.mp3";
 
@@ -82,6 +80,26 @@ import harePng from './icons/hare.png';
 import turkeyPng from './icons/turkey.png';
 import alienPng from './icons/alien.png';
 import hedgehogPng from './icons/hedgehog.png';
+import yogurtPng from './icons/yogurt.png';
+import cowPng from './icons/cow.png';
+import lemonPng from './icons/lemon.png';
+import carPng from './icons/car.png';
+import threadSpoolPng from './icons/thread-spool.png';
+import cucumberPng from './icons/cucumber.png';
+import parrotPng from './icons/parrot.png';
+import crayfishPng from './icons/crayfish.png';
+import sunPng from './icons/sunny.png';
+import tigerPng from './icons/tiger.png';
+import pearlPng from './icons/pearl.png';
+import flamingoPng from './icons/flamingo.png';
+import hamsterPng from './icons/hamster.png';
+import pappyPng from './icons/pappy.png';
+import turtlePng from './icons/turtle.png';
+import pineConePng from './icons/pine-cone.png';
+import pikePng from './icons/pike.png';
+import ьPng from './icons/ь.png';
+import юлаPng from './icons/юла.png';
+import christmasTreePng from './icons/christmas-tree.png';
 
 export const ukraineAlphabet = [
   {
@@ -165,124 +183,121 @@ export const ukraineAlphabet = [
   {
     letter: "Й",
     color: "#2E2B92",
-    src: "https://image.flaticon.com/icons/png/512/2689/2689423.png",
+    src: yogurtPng,
     name: "Йогурт",
   },
   {
     letter: "К",
     color: "#B7D340",
-    src: "https://image.flaticon.com/icons/svg/2395/2395796.svg",
+    src: cowPng,
     name: "Корова",
   },
   {
     letter: "Л",
     color: "#0AADE9",
-    src: "https://image.flaticon.com/icons/png/512/1998/1998047.png",
+    src: lemonPng,
     name: "Лимон",
   },
   {
     letter: "М",
     color: "#EA008D",
-    src: "https://image.flaticon.com/icons/svg/741/741407.svg",
+    src: carPng,
     name: "Машина",
   },
   {
     letter: "Н",
     color: "#2E2B92",
-    src: "https://image.flaticon.com/icons/svg/523/523793.svg",
+    src: threadSpoolPng,
     name: "Нитка",
   },
   {
     letter: "О",
     color: "#B7D340",
-    src: "https://image.flaticon.com/icons/png/512/433/433709.png",
+    src: cucumberPng,
     name: "Огірок",
   },
   {
     letter: "П",
     color: "#F59120",
-    src: "https://image.flaticon.com/icons/svg/2016/2016512.svg",
+    src: parrotPng,
     name: "Папуга",
   },
   {
     letter: "Р",
     color: "#F8EA13",
-    src: "https://image.flaticon.com/icons/svg/2086/2086572.svg",
-    name: "Ракета",
+    src: crayfishPng,
+    name: "Рак",
   },
   {
     letter: "С",
     color: "#B3D43A",
-    src: "https://image.flaticon.com/icons/png/512/826/826955.png",
+    src: sunPng,
     name: "Сонце",
   },
   {
     letter: "Т",
     color: "#04ACE4",
-    src: "https://image.flaticon.com/icons/png/512/375/375073.png",
+    src: tigerPng,
     name: "Тигр",
   },
   {
     letter: "У",
     color: "#D9077D",
-    src: "https://image.flaticon.com/icons/svg/486/486399.svg",
+    src: pearlPng,
     name: "Устриця",
   },
   {
     letter: "Ф",
     color: "#2E2E8C",
-    src: "https://image.flaticon.com/icons/svg/2707/2707797.svg",
+    src: flamingoPng,
     name: "Фламінго",
   },
   {
     letter: "Х",
     color: "#ED3131",
-    src: "https://image.flaticon.com/icons/svg/1998/1998671.svg",
+    src: hamsterPng,
     name: "Хом'як",
   },
   {
     letter: "Ц",
     color: "#F7901B",
-    src: "https://image.flaticon.com/icons/svg/1279/1279250.svg",
-    // src: "https://image.flaticon.com/icons/svg/2913/2913748.svg",
+    src: pappyPng,
     name: "Цуценя",
   },
   {
     letter: "Ч",
     color: "#F9F506",
-    src: "https://image.flaticon.com/icons/svg/616/616651.svg",
+    src: turtlePng,
     name: "Черепаха",
   },
   {
     letter: "Ш",
     color: "#B7D64A",
-    src: "https://image.flaticon.com/icons/svg/621/621646.svg",
+    src: pineConePng,
     name: "Шишка",
   },
   {
     letter: "Щ",
     color: "#02AFE8",
-    src: "https://cdn-icons-png.flaticon.com/512/1134/1134431.png",
-    //src: "https://image.flaticon.com/icons/svg/1279/1279250.svg",
+    src: pikePng,
     name: "Щука",
   },
   {
     letter: "Ь",
     color: "#F06543",
-    src: "https://image.flaticon.com/icons/svg/2912/2912778.svg",
+    src: ьPng,
     name: "Ь",
   },
   {
     letter: "Ю",
     color: "#F99B28",
-    src: "https://cdn-icons-png.flaticon.com/512/3736/3736053.png",
-    // src: "https://image.flaticon.com/icons/svg/826/826910.svg",
+    src: юлаPng,
     name: "Юла",
   },
   {
     letter: "Я",
     color: "#FEF723",
-    src: "https://image.flaticon.com/icons/svg/629/629570.svg",
+    src: christmasTreePng,
     name: "Ялинка",
   },
 ];
@@ -341,7 +356,7 @@ export const audioUkraineAlphabet = {
   Нитка: нитка,
   Огірок: огірок,
   Папуга: папуга,
-  Ракета: ракета,
+  Рак: рак,
   Сонце: сонце,
   Тигр: тигр,
   Устриця: устриця,
@@ -351,7 +366,6 @@ export const audioUkraineAlphabet = {
   Черепаха: черепаха,
   Шишка: шишка,
   Щука: щука,
-  // Юрок: юрок,
   Юла: юла,
   Ялинка: ялинка,
 };
