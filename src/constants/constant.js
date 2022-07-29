@@ -9,6 +9,7 @@ export const languages = [
 ];
 
 export const GamesConfig = {
+  // eslint-disable-next-line
   ['english-letter-pronunciation'] : <EnglishLetterPronunciation/>
 }
 

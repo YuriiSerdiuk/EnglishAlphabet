@@ -18,7 +18,10 @@ const useStyles = makeStyles((theme) => {
     root: {
       flexGrow: 1,
     },
-    pointer:{ cursor:"pointer"},
+    pointer:{
+      cursor:"pointer",
+      backgroundColor:'red',
+    },
     paper: { ...defaultStyle },
     phone: { ...defaultStyle, backgroundColor: "#ffff0042" },
     laptop: { ...defaultStyle, backgroundColor: "#ffff0042" },
@@ -27,14 +30,16 @@ const useStyles = makeStyles((theme) => {
 });
 
 function FormRow(props) {
-  const { soundLoud } = props;
   const {
+    soundLoud,
     styleLaters,
     audioAlphabet,
     hideLogo,
     language,
     audioNumbers,
+    callback,
   } = props;
+
   const classes = useStyles();
   const media = {
     phone: useMediaQuery(" (min-width: 200px) and (max-width: 480px)"),
@@ -52,9 +57,12 @@ function FormRow(props) {
             <Paper
               key={letter}
               onClick={() => {
-                language &&
+                if(language) {
                   makeSound(letter, audioNumbers[language], soundLoud);
-                !hideLogo && makeSound(letter, audioAlphabet, soundLoud);
+                }else {
+                  makeSound(letter, audioAlphabet, soundLoud);
+                  callback && callback(letter);
+                }
               }}
               className={`${classes[result && result[0]]} ${classes.pointer} `}
               elevation={3}

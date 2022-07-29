@@ -32,12 +32,16 @@ const useStyles = makeStyles((theme) => ({
   number: {
     textAlign: "center",
     width: "100%",
-    fontSize: "3rem",
+    fontSize: "5rem",
+    '&:active': {
+      backgroundColor: '#fff',
+      color: '#3c52b2',
+    },
   },
 }));
 
 const Card = (props) => {
-  const { letter, src, name, audioAlphabet, hideLogo, soundLoud } = props;
+  const { letter, src, name, audioAlphabet, hideLogo, soundLoud} = props;
   const classes = useStyles();
   const media = {
     phone: useMediaQuery(" (min-width: 200px) and (max-width: 480px)"),
