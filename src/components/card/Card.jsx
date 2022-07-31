@@ -8,7 +8,7 @@ import cross from '../../assets/icons/cross.png';
 
 import { makeSound, getMediaQuery } from "../../utils/helper";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   card: {
     display: "flex",
     flexDirection: "row",
@@ -114,7 +114,6 @@ const Card = (props) => {
     <div
         className={classes.card}
         onClick={()=>{
-
             if(language) {
               makeSound(letter, audioNumbers[language], soundLoud);
             }else {
@@ -150,6 +149,10 @@ const Card = (props) => {
             className={classes.img}
             src={src ? src : ""}
             alt={name ? name : "text"}
+            onClick={(e) => {
+              makeSound(name, audioAlphabet, soundLoud);
+              e.stopPropagation();
+            }}
           />
           <p
             onClick={(e) => {

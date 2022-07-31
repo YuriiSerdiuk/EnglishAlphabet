@@ -1,18 +1,10 @@
 import React from "react";
 import Card from "./Card";
-
-import { connect } from "react-redux";
+import {useSelector} from "react-redux";
 
 const CardContainer = (props) => {
-  return <Card {...props} />;
+  const soundLoud =  useSelector(({settings}) => settings.soundLoud);
+  return <Card  soundLoud={soundLoud} {...props} />;
 };
 
-const mapStateToProps = ({ settings }) => {
-  return {
-    soundLoud: settings.soundLoud,
-  };
-};
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
+export default CardContainer;
