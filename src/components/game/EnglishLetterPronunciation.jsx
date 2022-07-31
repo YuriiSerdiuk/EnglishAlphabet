@@ -24,22 +24,25 @@ const EnglishLetterPronunciation = () => {
         },2000);
     }
 
+    const repeatLetter = (letter) => {
+        makeSound(letter, audioAlphabet, 1);
+    }
+
     return <div>
-        <div>control panel
-        <button>start</button>
-        <button>pause</button>
-        <button>repeat</button>
-            <span> 0 i_n_t_e_r_v_a_l 10</span>
+        <div style={{height:'2em'}} >control panel
+        <button
+        onClick={()=>randomLetter && repeatLetter(randomLetter)}
+        > Repeat word </button>
+
         </div>
         <div>
             <Alphabet
                 hideLogo={true}
+                withWinsIcons={true}
+                randomLetter={randomLetter}
                 callback = {(letter)=>{
                     if(randomLetter === letter) {
-                        console.log('correct');
-                        startGameLetterVoice(alphabets);
-                    }else {
-                        console.log('correct');
+                        setTimeout(()=>{startGameLetterVoice(alphabets)},1000)
                     }
                 }}
             />

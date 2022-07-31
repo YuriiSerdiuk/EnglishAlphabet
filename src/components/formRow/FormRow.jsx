@@ -5,7 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
 import Card from "../card";
-import { makeSound, getMediaQuery } from "../../utils/helper";
+import { getMediaQuery } from "../../utils/helper";
 
 const useStyles = makeStyles((theme) => {
   const defaultStyle = {
@@ -31,13 +31,10 @@ const useStyles = makeStyles((theme) => {
 
 function FormRow(props) {
   const {
-    soundLoud,
     styleLaters,
     audioAlphabet,
     hideLogo,
-    language,
-    audioNumbers,
-    callback,
+    withWinsIcons,
   } = props;
 
   const classes = useStyles();
@@ -56,14 +53,6 @@ function FormRow(props) {
           <Grid key={letter} item xs={4} sm={3} md={2} lg={2}>
             <Paper
               key={letter}
-              onClick={() => {
-                if(language) {
-                  makeSound(letter, audioNumbers[language], soundLoud);
-                }else {
-                  makeSound(letter, audioAlphabet, soundLoud);
-                  callback && callback(letter);
-                }
-              }}
               className={`${classes[result && result[0]]} ${classes.pointer} `}
               elevation={3}
               style={{
@@ -76,6 +65,8 @@ function FormRow(props) {
                 name={name}
                 audioAlphabet={audioAlphabet}
                 hideLogo={hideLogo}
+                withWinsIcons={withWinsIcons}
+                {...props}
               />
             </Paper>
           </Grid>
