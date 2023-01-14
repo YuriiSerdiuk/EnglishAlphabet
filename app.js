@@ -16,6 +16,7 @@ app.get("*", (req, res) => {
 async function start() {
   try {
     app.listen(PORT,()=>{
+      console.log(`http://localhost:4000/`);
       console.log(`server started on port ${PORT}`);
     }) ;
   }catch (e) {

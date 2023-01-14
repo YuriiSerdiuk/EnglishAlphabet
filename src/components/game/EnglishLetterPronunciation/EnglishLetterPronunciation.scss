@@ -1,0 +1,34 @@
+.game-wrapper {
+  margin-top: 0;
+  padding-top: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.modal-window {
+  &.active {
+    width: 100%;
+    height: 90vh;
+    position:absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 32px;
+    color: #c20c0c;
+
+    & svg {
+      width: 20%;
+      height: 20%;
+    }
+  }
+
+  &.hide {
+    z-index: -1;
+    & svg {
+      width: 0;
+      height: 0;
+    }
+  }
+}

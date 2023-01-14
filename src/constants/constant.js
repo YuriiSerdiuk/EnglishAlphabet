@@ -1,5 +1,5 @@
 import React from 'react';
-import EnglishLetterPronunciation from "../components/game/EnglishLetterPronunciation";
+import EnglishLetterPronunciation from "../components/game/EnglishLetterPronunciation/EnglishLetterPronunciation";
 
 export const alphabet = ["english", "russian", "ukraine"];
 export const languages = [
